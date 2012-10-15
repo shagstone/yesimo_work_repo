@@ -1,0 +1,1486 @@
+
+
+USE master_catalog;
+
+-- --------------------------------------------------------------
+-- Load table master_catalog.brand
+-- 
+-- Create Date  08-25-2012
+-- --------------------------------------------------------------
+
+SELECT COUNT(*) AS record_count_brand
+FROM master_catalog.brand;
+
+
+INSERT INTO brand(brand_name, create_date) 
+SELECT '2(X)ist', NOW()UNION  
+SELECT '2GIG', NOW()UNION  
+SELECT 'AC Delco', NOW()UNION  
+SELECT 'Accelle cables', NOW()UNION  
+SELECT 'Accents', NOW()UNION  
+SELECT 'Accoustic research', NOW()UNION  
+SELECT 'ACCUTRON', NOW()UNION  
+SELECT 'Acer', NOW()UNION  
+SELECT 'Achla Designs', NOW()UNION  
+SELECT 'Active Thermal Management', NOW()UNION  
+SELECT 'ACTIVISION', NOW()UNION  
+SELECT 'Adesso', NOW()UNION  
+SELECT 'ADIDAS', NOW()UNION  
+SELECT 'Adidas Golf', NOW()UNION  
+SELECT 'ADS ENTERPRISES ', NOW()UNION  
+SELECT 'AERO BED ', NOW()UNION  
+SELECT 'Aerolife', NOW()UNION  
+SELECT 'AGA', NOW()UNION  
+SELECT 'Agfa', NOW()UNION  
+SELECT 'Air Oasis', NOW()UNION  
+SELECT 'Akai', NOW()UNION  
+SELECT 'Alarm.com', NOW()UNION  
+SELECT 'ALFRED DUNHILL', NOW()UNION  
+SELECT 'ALFRED SUNG', NOW()UNION  
+SELECT 'Ality', NOW()UNION  
+SELECT 'ALL CLAD', NOW()UNION  
+SELECT 'All Star Marketing', NOW()UNION  
+SELECT 'Alpen', NOW()UNION  
+SELECT 'ALTEC LANSING', NOW()UNION  
+SELECT 'Altronix', NOW()UNION  
+SELECT 'AMANA', NOW()UNION  
+SELECT 'Ambia', NOW()UNION  
+SELECT 'AMD', NOW()UNION  
+SELECT 'American Crew', NOW()UNION  
+SELECT 'American Range', NOW()UNION  
+SELECT 'Amplifier technologies', NOW()UNION  
+SELECT 'AMS', NOW()UNION  
+SELECT 'Amy Butler', NOW()UNION  
+SELECT 'Amzer', NOW()UNION  
+SELECT 'Anchor Hocking', NOW()UNION  
+SELECT 'Andrea Electronics', NOW()UNION  
+SELECT 'ANGELA ADAMS', NOW()UNION  
+SELECT 'Anita', NOW()UNION  
+SELECT 'Anlen', NOW()UNION  
+SELECT 'Anolon', NOW()UNION  
+SELECT 'Antiques', NOW()UNION  
+SELECT 'AOC', NOW()UNION  
+SELECT 'AOpen', NOW()UNION  
+SELECT 'APC', NOW()UNION  
+SELECT 'Apex', NOW()UNION  
+SELECT 'APOLLO', NOW()UNION  
+SELECT 'Apple', NOW()UNION  
+SELECT 'Applica', NOW()UNION  
+SELECT 'Arabesque', NOW()UNION  
+SELECT 'ARAMIS', NOW()UNION  
+SELECT 'Arc Audio', NOW()UNION  
+SELECT 'ARCHOS', NOW()UNION  
+SELECT 'Areca', NOW()UNION  
+SELECT 'Arizona', NOW()UNION  
+SELECT 'ARMANI', NOW()UNION  
+SELECT 'Aroma', NOW()UNION  
+SELECT 'Aroma ready', NOW()UNION  
+SELECT 'Aromaflora', NOW()UNION  
+SELECT 'Array', NOW()UNION  
+SELECT 'Aruba', NOW()UNION  
+SELECT 'Asante', NOW()UNION  
+SELECT 'Asko', NOW()UNION  
+SELECT 'Assets', NOW()UNION  
+SELECT 'ASUS', NOW()UNION  
+SELECT 'ASUS Optical', NOW()UNION  
+SELECT 'AT&T', NOW()UNION  
+SELECT 'ATARI GAMES', NOW()UNION  
+SELECT 'ATI', NOW()UNION  
+SELECT 'Atlantic technologies', NOW()UNION  
+SELECT 'Audio Control', NOW()UNION  
+SELECT 'AUDIO-TECHNICA ', NOW()UNION  
+SELECT 'Audiovox', NOW()UNION  
+SELECT 'Augen', NOW()UNION  
+SELECT 'Aura Cacia', NOW()UNION  
+SELECT 'Authentic Models', NOW()UNION  
+SELECT 'Avanquest', NOW()UNION  
+SELECT 'Avanti', NOW()UNION  
+SELECT 'AVISTA', NOW()UNION  
+SELECT 'Avora', NOW()UNION  
+SELECT 'AXIS', NOW()UNION  
+SELECT 'Axxera', NOW()UNION  
+SELECT 'B''tempted by Wacoal', NOW()UNION  
+SELECT 'Baby Cakes', NOW()UNION  
+SELECT 'BABYBJÖRN®', NOW()UNION  
+SELECT 'BACK TO BASICS', NOW()UNION  
+SELECT 'Bactrack', NOW()UNION  
+SELECT 'Bali', NOW()UNION  
+SELECT 'BALLARINI', NOW()UNION  
+SELECT 'Bally', NOW()UNION  
+SELECT 'Barbados', NOW()UNION  
+SELECT 'Barbie', NOW()UNION  
+SELECT 'Barely There', NOW()UNION  
+SELECT 'bayberry', NOW()UNION  
+SELECT 'BDI', NOW()UNION  
+SELECT 'BED HEAD', NOW()UNION  
+SELECT 'Bedol', NOW()UNION  
+SELECT 'BELKIN', NOW()UNION  
+SELECT 'Beltronics', NOW()UNION  
+SELECT 'Berkshire', NOW()UNION  
+SELECT 'Bermuda', NOW()UNION  
+SELECT 'Best Kits', NOW()UNION  
+SELECT 'BETHESDA', NOW()UNION  
+SELECT 'BFG TECHNOLOGIES', NOW()UNION  
+SELECT 'Biatta', NOW()UNION  
+SELECT 'BIC America', NOW()UNION  
+SELECT 'Biggest Loser', NOW()UNION  
+SELECT 'BigRAudio', NOW()UNION  
+SELECT 'BILL BLASS', NOW()UNION  
+SELECT 'Biltmore', NOW()UNION  
+SELECT 'Biolage', NOW()UNION  
+SELECT 'Bionaire', NOW()UNION  
+SELECT 'BISSELL', NOW()UNION  
+SELECT 'BITDEFENDER', NOW()UNION  
+SELECT 'Black and Decker', NOW()UNION  
+SELECT 'Blackberry', NOW()UNION  
+SELECT 'Blubridge', NOW()UNION  
+SELECT 'Blufire', NOW()UNION  
+SELECT 'Bob Timberlake', NOW()UNION  
+SELECT 'Body Up', NOW()UNION  
+SELECT 'Body Wrap', NOW()UNION  
+SELECT 'Bonjour', NOW()UNION  
+SELECT 'Boon', NOW()UNION  
+SELECT 'Bosch', NOW()UNION  
+SELECT 'Bose', NOW()UNION  
+SELECT 'Boss', NOW()UNION  
+SELECT 'Boston Accoustics', NOW()UNION  
+SELECT 'Boston Mobile', NOW()UNION  
+SELECT 'BOUCHERON', NOW()UNION  
+SELECT 'Bounty Hunter', NOW()UNION  
+SELECT 'Boyo', NOW()UNION  
+SELECT 'Brainy Company', NOW()UNION  
+SELECT 'Brand Node', NOW()UNION  
+SELECT 'BRAUN', NOW()UNION  
+SELECT 'BREADMAN ', NOW()UNION  
+SELECT 'Brighton', NOW()UNION  
+SELECT 'BRITAX', NOW()UNION  
+SELECT 'broan', NOW()UNION  
+SELECT 'BROTHER ', NOW()UNION  
+SELECT 'BULOVA', NOW()UNION  
+SELECT 'Bunn', NOW()UNION  
+SELECT 'BURBERRY', NOW()UNION  
+SELECT 'Bushwacker', NOW()UNION  
+SELECT 'Bvlgari', NOW()UNION  
+SELECT 'C-in2', NOW()UNION  
+SELECT 'Cables to Go', NOW()UNION  
+SELECT 'CABLES UNLIMITED', NOW()UNION  
+SELECT 'Callaway Golf', NOW()UNION  
+SELECT 'CALPHALON', NOW()UNION  
+SELECT 'calrad Electronics', NOW()UNION  
+SELECT 'Calvin Klien', NOW()UNION  
+SELECT 'Canali', NOW()UNION  
+SELECT 'CANON', NOW()UNION  
+SELECT 'Cape Town', NOW()UNION  
+SELECT 'Capitola', NOW()UNION  
+SELECT 'Carbine', NOW()UNION  
+SELECT 'Cardiff', NOW()UNION  
+SELECT 'CAROLINA HERRERA', NOW()UNION  
+SELECT 'CASE LOGIC', NOW()UNION  
+SELECT 'CASIO', NOW()UNION  
+SELECT 'Cass Luxury Shapewear', NOW()UNION  
+SELECT 'celltronix', NOW()UNION  
+SELECT 'Centralite', NOW()UNION  
+SELECT 'Centre Street', NOW()UNION  
+SELECT 'Century', NOW()UNION  
+SELECT 'Champion', NOW()UNION  
+SELECT 'Chanel', NOW()UNION  
+SELECT 'Channel Master', NOW()UNION  
+SELECT 'Channel Vision', NOW()UNION  
+SELECT 'Chantelle', NOW()UNION  
+SELECT 'Charlston', NOW()UNION  
+SELECT 'Chi', NOW()UNION  
+SELECT 'Chicco', NOW()UNION  
+SELECT 'CHRISTIAN AUDIGIER', NOW()UNION  
+SELECT 'CHRISTIAN DIOR', NOW()UNION  
+SELECT 'Chuggington', NOW()UNION  
+SELECT 'Circulon', NOW()UNION  
+SELECT 'CITIZEN', NOW()UNION  
+SELECT 'Clarins', NOW()UNION  
+SELECT 'Clarion', NOW()UNION  
+SELECT 'Cleveland Golf', NOW()UNION  
+SELECT 'Clickfree', NOW()UNION  
+SELECT 'Clinique', NOW()UNION  
+SELECT 'Cnet', NOW()UNION  
+SELECT 'Cobra', NOW()UNION  
+SELECT 'Cobra Digital', NOW()UNION  
+SELECT 'Coby', NOW()UNION  
+SELECT 'CODEMASTERS', NOW()UNION  
+SELECT 'Coleman', NOW()UNION  
+SELECT 'Collection', NOW()UNION  
+SELECT 'Commando', NOW()UNION  
+SELECT 'Commercial', NOW()UNION  
+SELECT 'Commercial Cool', NOW()UNION  
+SELECT 'Component Video', NOW()UNION  
+SELECT 'Conair', NOW()UNION  
+SELECT 'Concepts', NOW()UNION  
+SELECT 'Connectors', NOW()UNION  
+SELECT 'Continental', NOW()UNION  
+SELECT 'Control freq', NOW()UNION  
+SELECT 'Coolmax', NOW()UNION  
+SELECT 'Corinex', NOW()UNION  
+SELECT 'Cosabella', NOW()UNION  
+SELECT 'COSCO', NOW()UNION  
+SELECT 'Cottage', NOW()UNION  
+SELECT 'COTY', NOW()UNION  
+SELECT 'Count me healthy', NOW()UNION  
+SELECT 'Couture', NOW()UNION  
+SELECT 'COWAY', NOW()UNION  
+SELECT 'CRAVE ', NOW()UNION  
+SELECT 'Crazerasers', NOW()UNION  
+SELECT 'Creativeware', NOW()UNION  
+SELECT 'CREED', NOW()UNION  
+SELECT 'CROCKPOT', NOW()UNION  
+SELECT 'Crosley', NOW()UNION  
+SELECT 'Cuddl Duds', NOW()UNION  
+SELECT 'Cufflinks Inc', NOW()UNION  
+SELECT 'Cuisinart', NOW()UNION  
+SELECT 'Cupertino', NOW()UNION  
+SELECT 'Cutter & Buck', NOW()UNION  
+SELECT 'Cyber Acoustics', NOW()UNION  
+SELECT 'CyberPower', NOW()UNION  
+SELECT 'Cycle Force', NOW()UNION  
+SELECT 'Cypress', NOW()UNION  
+SELECT 'D-Link', NOW()UNION  
+SELECT 'Da Lite', NOW()UNION  
+SELECT 'Dacor', NOW()UNION  
+SELECT 'DANBY', NOW()UNION  
+SELECT 'danewave', NOW()UNION  
+SELECT 'Daron Toys', NOW()UNION  
+SELECT 'DAVIDOFF', NOW()UNION  
+SELECT 'Dearfoams', NOW()UNION  
+SELECT 'Deep Steep', NOW()UNION  
+SELECT 'Dell', NOW()UNION  
+SELECT 'DELONGHI', NOW()UNION  
+SELECT 'Denon', NOW()UNION  
+SELECT 'Dermalogica', NOW()UNION  
+SELECT 'DEWALT POWER TOOLS ', NOW()UNION  
+SELECT 'Diamond', NOW()UNION  
+SELECT 'DIAMOND MULTIMEDIA ', NOW()UNION  
+SELECT 'DIESEL', NOW()UNION  
+SELECT 'Digicom', NOW()UNION  
+SELECT 'DIGITAL SPECTRUM', NOW()UNION  
+SELECT 'Digital Watchdog', NOW()UNION  
+SELECT 'Dinosaur Train', NOW()UNION  
+SELECT 'Dio', NOW()UNION  
+SELECT 'DIRT DEVIL', NOW()UNION  
+SELECT 'Disney', NOW()UNION  
+SELECT 'DKNY', NOW()UNION  
+SELECT 'DOLCE & GABBANA', NOW()UNION  
+SELECT 'Dominique', NOW()UNION  
+SELECT 'Donna karan Hosiery', NOW()UNION  
+SELECT 'Dr. Rey Shapewear', NOW()UNION  
+SELECT 'DREAMGEAR', NOW()UNION  
+SELECT 'Dreamgirl', NOW()UNION  
+SELECT 'DUCANE', NOW()UNION  
+SELECT 'Dunhill', NOW()UNION  
+SELECT 'Duratu', NOW()UNION  
+SELECT 'DVDO', NOW()UNION  
+SELECT 'DYSON', NOW()UNION  
+SELECT 'EA', NOW()UNION  
+SELECT 'Early Lingo', NOW()UNION  
+SELECT 'Earthquake sound', NOW()UNION  
+SELECT 'Easy Pull', NOW()UNION  
+SELECT 'ECLECTRICS', NOW()UNION  
+SELECT 'Ecoangels', NOW()UNION  
+SELECT 'EDDIE BAUER', NOW()UNION  
+SELECT 'EIDOS', NOW()UNION  
+SELECT 'ELECTROLUX', NOW()UNION  
+SELECT 'Elegant', NOW()UNION  
+SELECT 'Elite', NOW()UNION  
+SELECT 'ELIZABETH ARDEN', NOW()UNION  
+SELECT 'ELIZABETH TAYLOR', NOW()UNION  
+SELECT 'Elomi', NOW()UNION  
+SELECT 'Emachines', NOW()UNION  
+SELECT 'EMERILWARE', NOW()UNION  
+SELECT 'Emerson', NOW()UNION  
+SELECT 'Emporio Armani', NOW()UNION  
+SELECT 'ENVION ', NOW()UNION  
+SELECT 'Epson', NOW()UNION  
+SELECT 'ERTL', NOW()UNION  
+SELECT 'ESCADA', NOW()UNION  
+SELECT 'Escante', NOW()UNION  
+SELECT 'Escort', NOW()UNION  
+SELECT 'ESQ', NOW()UNION  
+SELECT 'Estee lauder', NOW()UNION  
+SELECT 'ETON CORP.', NOW()UNION  
+SELECT 'Eureka', NOW()UNION  
+SELECT 'eVGA', NOW()UNION  
+SELECT 'Exogear', NOW()UNION  
+SELECT 'Falke', NOW()UNION  
+SELECT 'Fantasie', NOW()UNION  
+SELECT 'FARBERWARE', NOW()UNION  
+SELECT 'Fashion Angel', NOW()UNION  
+SELECT 'Fashionangelwear', NOW()UNION  
+SELECT 'FAT CAT', NOW()UNION  
+SELECT 'Felina', NOW()UNION  
+SELECT 'FELLOWES', NOW()UNION  
+SELECT 'Ferrari', NOW()UNION  
+SELECT 'Fire Sense', NOW()UNION  
+SELECT 'Fitness Quest', NOW()UNION  
+SELECT 'Five Star', NOW()UNION  
+SELECT 'Flexies', NOW()UNION  
+SELECT 'Flip Video', NOW()UNION  
+SELECT 'Flipsync', NOW()UNION  
+SELECT 'FOOD SAVER', NOW()UNION  
+SELECT 'For feets Sake', NOW()UNION  
+SELECT 'Fortress Chairs', NOW()UNION  
+SELECT 'Fossil', NOW()UNION  
+SELECT 'Foxconn', NOW()UNION  
+SELECT 'frewtpeel', NOW()UNION  
+SELECT 'Freya', NOW()UNION  
+SELECT 'Frigidaire', NOW()UNION  
+SELECT 'Fruit of the Loom', NOW()UNION  
+SELECT 'FUJI', NOW()UNION  
+SELECT 'Ful', NOW()UNION  
+SELECT 'Gardman', NOW()UNION  
+SELECT 'GARMIN', NOW()UNION  
+SELECT 'GE ', NOW()UNION  
+SELECT 'GEFORCE', NOW()UNION  
+SELECT 'Gemini Jets', NOW()UNION  
+SELECT 'GEORGE FOREMAN', NOW()UNION  
+SELECT 'GIANNI VERSACE', NOW()UNION  
+SELECT 'Gigabyte', NOW()UNION  
+SELECT 'Gilmour', NOW()UNION  
+SELECT 'GIORGIO ARMANI', NOW()UNION  
+SELECT 'GIVENCHY', NOW()UNION  
+SELECT 'Glamorise', NOW()UNION  
+SELECT 'GLD', NOW()UNION  
+SELECT 'Gold Toe', NOW()UNION  
+SELECT 'Goldwell', NOW()UNION  
+SELECT 'Good Home', NOW()UNION  
+SELECT 'Got2bwireless', NOW()UNION  
+SELECT 'GRACO', NOW()UNION  
+SELECT 'Grandmax', NOW()UNION  
+SELECT 'Green Label', NOW()UNION  
+SELECT 'greystone Brands', NOW()UNION  
+SELECT 'Gucci', NOW()UNION  
+SELECT 'Guerlain', NOW()UNION  
+SELECT 'Guidecraft', NOW()UNION  
+SELECT 'GUY LAROCHE', NOW()UNION  
+SELECT 'HAAN', NOW()UNION  
+SELECT 'HADAKI', NOW()UNION  
+SELECT 'Hai', NOW()UNION  
+SELECT 'Haier', NOW()UNION  
+SELECT 'Haire', NOW()UNION  
+SELECT 'Halex', NOW()UNION  
+SELECT 'HALSTON', NOW()UNION  
+SELECT 'Hamilton Beach', NOW()UNION  
+SELECT 'Hanes', NOW()UNION  
+SELECT 'Hanky Panky', NOW()UNION  
+SELECT 'hannspree', NOW()UNION  
+SELECT 'Hanro', NOW()UNION  
+SELECT 'Hard tail', NOW()UNION  
+SELECT 'Harvest Trading', NOW()UNION  
+SELECT 'hasbro', NOW()UNION  
+SELECT 'HAUPPAUGE  ', NOW()UNION  
+SELECT 'Haven', NOW()UNION  
+SELECT 'Head', NOW()UNION  
+SELECT 'healing Waters', NOW()UNION  
+SELECT 'Healthmark', NOW()UNION  
+SELECT 'Heather Gardner', NOW()UNION  
+SELECT 'HELEN OF TROY', NOW()UNION  
+SELECT 'Hercules', NOW()UNION  
+SELECT 'HERMES', NOW()UNION  
+SELECT 'Herpa', NOW()UNION  
+SELECT 'HFVT', NOW()UNION  
+SELECT 'HGTV', NOW()UNION  
+SELECT 'Hitachi', NOW()UNION  
+SELECT 'HMDX', NOW()UNION  
+SELECT 'Hogan', NOW()UNION  
+SELECT 'Hohner', NOW()UNION  
+SELECT 'Holland Electronics', NOW()UNION  
+SELECT 'Holmes', NOW()UNION  
+SELECT 'Home Touch', NOW()UNION  
+SELECT 'Homedics', NOW()UNION  
+SELECT 'HONEYWELL', NOW()UNION  
+SELECT 'HOOVER', NOW()UNION  
+SELECT 'Hot Wheels', NOW()UNION  
+SELECT 'Hott', NOW()UNION  
+SELECT 'House of marley', NOW()UNION  
+SELECT 'HP', NOW()UNION  
+SELECT 'HTC', NOW()UNION  
+SELECT 'Hue', NOW()UNION  
+SELECT 'Hugo Boss', NOW()UNION  
+SELECT 'HUNTER FAN COMPANY', NOW()UNION  
+SELECT 'IADEA', NOW()UNION  
+SELECT 'IC Realtime', NOW()UNION  
+SELECT 'ID Defender', NOW()UNION  
+SELECT 'Ideal Products', NOW()UNION  
+SELECT 'Igloo', NOW()UNION  
+SELECT 'IH5', NOW()UNION  
+SELECT 'IHOME', NOW()UNION  
+SELECT 'iLuv', NOW()UNION  
+SELECT 'Inland', NOW()UNION  
+SELECT 'Inland Products', NOW()UNION  
+SELECT 'Innovative', NOW()UNION  
+SELECT 'Inside Out', NOW()UNION  
+SELECT 'INTEC', NOW()UNION  
+SELECT 'Intel', NOW()UNION  
+SELECT 'INTUIT ', NOW()UNION  
+SELECT 'IOGEAR', NOW()UNION  
+SELECT 'iport', NOW()UNION  
+SELECT 'IROBOT', NOW()UNION  
+SELECT 'isimple', NOW()UNION  
+SELECT 'ISIS', NOW()UNION  
+SELECT 'ISSEY MIYAKE', NOW()UNION  
+SELECT 'Izzo Golf', NOW()UNION  
+SELECT 'JA HENCKELS', NOW()UNION  
+SELECT 'JACK NICKLAUS', NOW()UNION  
+SELECT 'JAMO', NOW()UNION  
+SELECT 'JASCO  ', NOW()UNION  
+SELECT 'Jawbone', NOW()UNION  
+SELECT 'JEAN DESPREZ', NOW()UNION  
+SELECT 'JEAN PAUL GAULTIER', NOW()UNION  
+SELECT 'Jenn-Air', NOW()UNION  
+SELECT 'Jensen', NOW()UNION  
+SELECT 'JESSICA MCCLINTOCK', NOW()UNION  
+SELECT 'JJ Cole', NOW()UNION  
+SELECT 'Jody''s', NOW()UNION  
+SELECT 'John Deere', NOW()UNION  
+SELECT 'JOHN VARVATOS', NOW()UNION  
+SELECT 'Johnny Lightning', NOW()UNION  
+SELECT 'Johnny Loco', NOW()UNION  
+SELECT 'Joico', NOW()UNION  
+SELECT 'JOOP!', NOW()UNION  
+SELECT 'JOURNEY', NOW()UNION  
+SELECT 'JOVAN', NOW()UNION  
+SELECT 'JS KARAOKE', NOW()UNION  
+SELECT 'JUICY COUTURE', NOW()UNION  
+SELECT 'Julianna Rae', NOW()UNION  
+SELECT 'Juno', NOW()UNION  
+SELECT 'Just my Size', NOW()UNION  
+SELECT 'JVC', NOW()UNION  
+SELECT 'k Hall', NOW()UNION  
+SELECT 'Kalencom', NOW()UNION  
+SELECT 'Kalorik', NOW()UNION  
+SELECT 'Karen Neuburger', NOW()UNION  
+SELECT 'KARL LAGERFELD', NOW()UNION  
+SELECT 'KATHY IRELAND', NOW()UNION  
+SELECT 'Kawasaki', NOW()UNION  
+SELECT 'KENNETH COLE', NOW()UNION  
+SELECT 'Kenwood', NOW()UNION  
+SELECT 'Kick Stride', NOW()UNION  
+SELECT 'KIDCO', NOW()UNION  
+SELECT 'Kidsline', NOW()UNION  
+SELECT 'Killeen', NOW()UNION  
+SELECT 'Kingston', NOW()UNION  
+SELECT 'Kitchenaid', NOW()UNION  
+SELECT 'KMS', NOW()UNION  
+SELECT 'KODAK', NOW()UNION  
+SELECT 'KONAMI', NOW()UNION  
+SELECT 'Koss', NOW()UNION  
+SELECT 'KRUPS', NOW()UNION  
+SELECT 'Kwikset', NOW()UNION  
+SELECT 'L''eggs', NOW()UNION  
+SELECT 'L''oreal', NOW()UNION  
+SELECT 'La Blanca', NOW()UNION  
+SELECT 'LA CROSSE TECHNOLOGIES', NOW()UNION  
+SELECT 'LACOSTE', NOW()UNION  
+SELECT 'LaCrosse', NOW()UNION  
+SELECT 'Lakewood', NOW()UNION  
+SELECT 'Lamaze', NOW()UNION  
+SELECT 'Lancome', NOW()UNION  
+SELECT 'Lanvin', NOW()UNION  
+SELECT 'Lasco', NOW()UNION  
+SELECT 'Le Creuset', NOW()UNION  
+SELECT 'le mer', NOW()UNION  
+SELECT 'Le Mysterie', NOW()UNION  
+SELECT 'Le Tour de France', NOW()UNION  
+SELECT 'LEAPFROG ', NOW()UNION  
+SELECT 'LEARNING RESOURCES', NOW()UNION  
+SELECT 'lenovo', NOW()UNION  
+SELECT 'leon', NOW()UNION  
+SELECT 'LEXAR MEDIA', NOW()UNION  
+SELECT 'LEXMARK', NOW()UNION  
+SELECT 'LG', NOW()UNION  
+SELECT 'LG Optical', NOW()UNION  
+SELECT 'Lily of France', NOW()UNION  
+SELECT 'Linksy''s', NOW()UNION  
+SELECT 'Lite-On', NOW()UNION  
+SELECT 'Little Duck', NOW()UNION  
+SELECT 'Little Gifts', NOW()UNION  
+SELECT 'LIZ CLAIBORNE', NOW()UNION  
+SELECT 'LNT RICK FINK', NOW()UNION  
+SELECT 'Logitech ', NOW()UNION  
+SELECT 'LOLITA LEMPICKA', NOW()UNION  
+SELECT 'Lombardo', NOW()UNION  
+SELECT 'Lorex', NOW()UNION  
+SELECT 'LOWEPRO', NOW()UNION  
+SELECT 'Luca', NOW()UNION  
+SELECT 'LUCAS ARTS', NOW()UNION  
+SELECT 'Lunaire', NOW()UNION  
+SELECT 'Lutron', NOW()UNION  
+SELECT 'Lysse Leggings', NOW()UNION  
+SELECT 'M-Wave', NOW()UNION  
+SELECT 'mac', NOW()UNION  
+SELECT 'Macgregor', NOW()UNION  
+SELECT 'MADCATZ/SAITEK', NOW()UNION  
+SELECT 'madelco', NOW()UNION  
+SELECT 'madrid', NOW()UNION  
+SELECT 'Mag-Nif', NOW()UNION  
+SELECT 'MAGELLAN', NOW()UNION  
+SELECT 'Magicsuit', NOW()UNION  
+SELECT 'Magnavox', NOW()UNION  
+SELECT 'magnolia', NOW()UNION  
+SELECT 'MAIN STREET CLASSICS', NOW()UNION  
+SELECT 'manila', NOW()UNION  
+SELECT 'Mantis', NOW()UNION  
+SELECT 'Mariasch', NOW()UNION  
+SELECT 'MARILYN MIGLIN', NOW()UNION  
+SELECT 'marin', NOW()UNION  
+SELECT 'Marksman', NOW()UNION  
+SELECT 'marvel', NOW()UNION  
+SELECT 'Matrix', NOW()UNION  
+SELECT 'mattese', NOW()UNION  
+SELECT 'maxell', NOW()UNION  
+SELECT 'Maximo', NOW()UNION  
+SELECT 'Maytag', NOW()UNION  
+SELECT 'Media Drive', NOW()UNION  
+SELECT 'medina', NOW()UNION  
+SELECT 'Melissa & Doug', NOW()UNION  
+SELECT 'MEMOREX', NOW()UNION  
+SELECT 'MICHAEL KORS', NOW()UNION  
+SELECT 'MICROSOFT', NOW()UNION  
+SELECT 'Middle Atlantic', NOW()UNION  
+SELECT 'Midlite products', NOW()UNION  
+SELECT 'MIDWAY ', NOW()UNION  
+SELECT 'Mighty', NOW()UNION  
+SELECT 'Mighty Wicker', NOW()UNION  
+SELECT 'Milano', NOW()UNION  
+SELECT 'Milen', NOW()UNION  
+SELECT 'MILWAUKEE TOOLS', NOW()UNION  
+SELECT 'Mina Victory', NOW()UNION  
+SELECT 'Mine design', NOW()UNION  
+SELECT 'Mintek', NOW()UNION  
+SELECT 'MIO', NOW()UNION  
+SELECT 'Miracle Body', NOW()UNION  
+SELECT 'Miraclesuit', NOW()UNION  
+SELECT 'MITSUBISHI', NOW()UNION  
+SELECT 'MLB', NOW()UNION  
+SELECT 'Mogo', NOW()UNION  
+SELECT 'Molecule-R Flavors', NOW()UNION  
+SELECT 'MONSTER CABLE', NOW()UNION  
+SELECT 'Monster High', NOW()UNION  
+SELECT 'Montana', NOW()UNION  
+SELECT 'Montreal', NOW()UNION  
+SELECT 'MOSCHINO', NOW()UNION  
+SELECT 'MOTOROLA', NOW()UNION  
+SELECT 'MOVADO', NOW()UNION  
+SELECT 'Mr. Coffee', NOW()UNION  
+SELECT 'MSI', NOW()UNION  
+SELECT 'Murad', NOW()UNION  
+SELECT 'Muscle Soak', NOW()UNION  
+SELECT 'Musubo', NOW()UNION  
+SELECT 'My charge', NOW()UNION  
+SELECT 'Myron & Davis', NOW()UNION  
+SELECT 'NAKI', NOW()UNION  
+SELECT 'NAMCO', NOW()UNION  
+SELECT 'Nantucket', NOW()UNION  
+SELECT 'NARCISO RODRIGUEZ', NOW()UNION  
+SELECT 'Nascar', NOW()UNION  
+SELECT 'Nautica', NOW()UNION  
+SELECT 'NAVIGON', NOW()UNION  
+SELECT 'NBA', NOW()UNION  
+SELECT 'NCAA', NOW()UNION  
+SELECT 'NEAT RECEIPTS', NOW()UNION  
+SELECT 'Nelson', NOW()UNION  
+SELECT 'NETGEAR ', NOW()UNION  
+SELECT 'Nevada', NOW()UNION  
+SELECT 'New Hampshire', NOW()UNION  
+SELECT 'NEXT GENERATION', NOW()UNION  
+SELECT 'nexxus', NOW()UNION  
+SELECT 'NFL', NOW()UNION  
+SELECT 'NHL', NOW()UNION  
+SELECT 'Nike Golf', NOW()UNION  
+SELECT 'Nike-Phillips', NOW()UNION  
+SELECT 'NIKON', NOW()UNION  
+SELECT 'Nikura', NOW()UNION  
+SELECT 'Ninja', NOW()UNION  
+SELECT 'NINTENDO', NOW()UNION  
+SELECT 'NOKIA', NOW()UNION  
+SELECT 'NORELCO', NOW()UNION  
+SELECT 'Norlite', NOW()UNION  
+SELECT 'Northland', NOW()UNION  
+SELECT 'Not your daughters Jeans', NOW()UNION  
+SELECT 'Not your Daughters leggings', NOW()UNION  
+SELECT 'Nourtex', NOW()UNION  
+SELECT 'Novi', NOW()UNION  
+SELECT 'Novi Chaise', NOW()UNION  
+SELECT 'NPI', NOW()UNION  
+SELECT 'NuGiant', NOW()UNION  
+SELECT 'NYKO', NOW()UNION  
+SELECT 'Odyssey Golf', NOW()UNION  
+SELECT 'Office Star Porducts', NOW()UNION  
+SELECT 'Officially Liscensed', NOW()UNION  
+SELECT 'Olevia', NOW()UNION  
+SELECT 'Olympus', NOW()UNION  
+SELECT 'Omega', NOW()UNION  
+SELECT 'Omni', NOW()UNION  
+SELECT 'Omnimount', NOW()UNION  
+SELECT 'On-Q-legrand', NOW()UNION  
+SELECT 'Onkyo', NOW()UNION  
+SELECT 'Only', NOW()UNION  
+SELECT 'OPI', NOW()UNION  
+SELECT 'Oreck', NOW()UNION  
+SELECT 'OREGON SCIENTIFIC', NOW()UNION  
+SELECT 'Organics', NOW()UNION  
+SELECT 'Original Toy Co', NOW()UNION  
+SELECT 'Oro Alexander', NOW()UNION  
+SELECT 'OSCAR DE LA RENTA', NOW()UNION  
+SELECT 'OSD', NOW()UNION  
+SELECT 'Oster', NOW()UNION  
+SELECT 'Outback', NOW()UNION  
+SELECT 'Oxo', NOW()UNION  
+SELECT 'Pac', NOW()UNION  
+SELECT 'PACO RABANNE', NOW()UNION  
+SELECT 'PALOMA PICASSO', NOW()UNION  
+SELECT 'Panache', NOW()UNION  
+SELECT 'Panamorph', NOW()UNION  
+SELECT 'Panasonic', NOW()UNION  
+SELECT 'Papi', NOW()UNION  
+SELECT 'PARIS HILTON', NOW()UNION  
+SELECT 'Parker Bros.', NOW()UNION  
+SELECT 'Parrot', NOW()UNION  
+SELECT 'Paul Mitchell', NOW()UNION  
+SELECT 'PAUL SEBASTIAN', NOW()UNION  
+SELECT 'PC Treasures', NOW()UNION  
+SELECT 'PEAVEY ELECTRONICS ', NOW()UNION  
+SELECT 'Peerless', NOW()UNION  
+SELECT 'Penrose London', NOW()UNION  
+SELECT 'PENTAX', NOW()UNION  
+SELECT 'Pepe', NOW()UNION  
+SELECT 'PERRY ELLIS', NOW()UNION  
+SELECT 'Philadelphia', NOW()UNION  
+SELECT 'Philips  ', NOW()UNION  
+SELECT 'PHILIPS ACCESSORIES', NOW()UNION  
+SELECT 'Philips pronto', NOW()UNION  
+SELECT 'PIERRE CARDIN', NOW()UNION  
+SELECT 'Ping Golf', NOW()UNION  
+SELECT 'Pinnacle', NOW()UNION  
+SELECT 'Pinnacle Golf', NOW()UNION  
+SELECT 'Pioneer', NOW()UNION  
+SELECT 'Piranha', NOW()UNION  
+SELECT 'Pixel technologoes', NOW()UNION  
+SELECT 'PLANET 3', NOW()UNION  
+SELECT 'PLANTRONICS', NOW()UNION  
+SELECT 'Playtex', NOW()UNION  
+SELECT 'PNY TECHNOLOGIES', NOW()UNION  
+SELECT 'Polaris', NOW()UNION  
+SELECT 'Polaroid', NOW()UNION  
+SELECT 'Polk Audio', NOW()UNION  
+SELECT 'Pollenex', NOW()UNION  
+SELECT 'Poulan', NOW()UNION  
+SELECT 'Power Bag', NOW()UNION  
+SELECT 'prada', NOW()UNION  
+SELECT 'Precision Power', NOW()UNION  
+SELECT 'preference', NOW()UNION  
+SELECT 'Presto', NOW()UNION  
+SELECT 'Primal Elements', NOW()UNION  
+SELECT 'Pro Sports Eyewear', NOW()UNION  
+SELECT 'Proctor Silex', NOW()UNION  
+SELECT 'Product Specialties', NOW()UNION  
+SELECT 'Profile by Gottex', NOW()UNION  
+SELECT 'Promise', NOW()UNION  
+SELECT 'ProMounts', NOW()UNION  
+SELECT 'Punta', NOW()UNION  
+SELECT 'PURE DIGITAL', NOW()UNION  
+SELECT 'Puregear', NOW()UNION  
+SELECT 'Quebec', NOW()UNION  
+SELECT 'Queen', NOW()UNION  
+SELECT 'Radio Flyer', NOW()UNION  
+SELECT 'Ragalta', NOW()UNION  
+SELECT 'RALPH LAUREN', NOW()UNION  
+SELECT 'Rawlings', NOW()UNION  
+SELECT 'Rayban', NOW()UNION  
+SELECT 'Razer', NOW()UNION  
+SELECT 'RCA', NOW()UNION  
+SELECT 'RCS revolutionary', NOW()UNION  
+SELECT 'Readivac', NOW()UNION  
+SELECT 'Rebit', NOW()UNION  
+SELECT 'Regalta', NOW()UNION  
+SELECT 'Regent', NOW()UNION  
+SELECT 'Relaxing Aromatherapy', NOW()UNION  
+SELECT 'renaissance', NOW()UNION  
+SELECT 'rene furterer', NOW()UNION  
+SELECT 'Revlon', NOW()UNION  
+SELECT 'Robert Talbot', NOW()UNION  
+SELECT 'ROCHAS', NOW()UNION  
+SELECT 'RogersoCo', NOW()UNION  
+SELECT 'Roma', NOW()UNION  
+SELECT 'Romance', NOW()UNION  
+SELECT 'Ronco', NOW()UNION  
+SELECT 'Roxbury', NOW()UNION  
+SELECT 'ROYAL COPENHAGEN', NOW()UNION  
+SELECT 'RTI', NOW()UNION  
+SELECT 'Russound', NOW()UNION  
+SELECT 'SAFETY 1ST', NOW()UNION  
+SELECT 'Samsung', NOW()UNION  
+SELECT 'San Juan', NOW()UNION  
+SELECT 'Sandisk', NOW()UNION  
+SELECT 'SANGEAN', NOW()UNION  
+SELECT 'Sansui', NOW()UNION  
+SELECT 'Santa cruz', NOW()UNION  
+SELECT 'Sanus', NOW()UNION  
+SELECT 'SANYO', NOW()UNION  
+SELECT 'SARAH JESSICA PARKER', NOW()UNION  
+SELECT 'SAY IT WITH BOOK COVERS', NOW()UNION  
+SELECT 'SBJ', NOW()UNION  
+SELECT 'Scorche', NOW()UNION  
+SELECT 'SEAGATE', NOW()UNION  
+SELECT 'Security Labs', NOW()UNION  
+SELECT 'SEGA', NOW()UNION  
+SELECT 'SENNHEISER', NOW()UNION  
+SELECT 'SERTA', NOW()UNION  
+SELECT 'Severtson', NOW()UNION  
+SELECT 'Shark', NOW()UNION  
+SELECT 'Sharp', NOW()UNION  
+SELECT 'Sharper Image', NOW()UNION  
+SELECT 'Sherwood Newcastle', NOW()UNION  
+SELECT 'Shiseido', NOW()UNION  
+SELECT 'Siemens', NOW()UNION  
+SELECT 'SIIG', NOW()UNION  
+SELECT 'Silverstone', NOW()UNION  
+SELECT 'Sima', NOW()UNION  
+SELECT 'Simon Carter', NOW()UNION  
+SELECT 'Singer', NOW()UNION  
+SELECT 'Skelter', NOW()UNION  
+SELECT 'Sky Marks', NOW()UNION  
+SELECT 'SLING MEDIA', NOW()UNION  
+SELECT 'Smartfit3', NOW()UNION  
+SELECT 'SMARTPARTS', NOW()UNION  
+SELECT 'Smith & Wesson', NOW()UNION  
+SELECT 'Soho', NOW()UNION  
+SELECT 'Soleus air', NOW()UNION  
+SELECT 'SOLO', NOW()UNION  
+SELECT 'Solstice', NOW()UNION  
+SELECT 'SONICARE', NOW()UNION  
+SELECT 'SONOCADDIE', NOW()UNION  
+SELECT 'Sony', NOW()UNION  
+SELECT 'Sophia & Chloe', NOW()UNION  
+SELECT 'Soundcast', NOW()UNION  
+SELECT 'Soundquest', NOW()UNION  
+SELECT 'Soundstream', NOW()UNION  
+SELECT 'SOUTHPEAK INTERACTIVE', NOW()UNION  
+SELECT 'Spanx', NOW()UNION  
+SELECT 'Sparkle Power', NOW()UNION  
+SELECT 'Spatz', NOW()UNION  
+SELECT 'Spaun', NOW()UNION  
+SELECT 'SPECK ', NOW()UNION  
+SELECT 'Speco technologies', NOW()UNION  
+SELECT 'Splendid', NOW()UNION  
+SELECT 'Sportline', NOW()UNION  
+SELECT 'Spring Tides', NOW()UNION  
+SELECT 'Springfield', NOW()UNION  
+SELECT 'SQUARE ENIX', NOW()UNION  
+SELECT 'Stanley', NOW()UNION  
+SELECT 'STAUB USA, INC.', NOW()UNION  
+SELECT 'STEAM FAST', NOW()UNION  
+SELECT 'Stiga America', NOW()UNION  
+SELECT 'Stinger', NOW()UNION  
+SELECT 'Stowaway', NOW()UNION  
+SELECT 'Sub-Zero', NOW()UNION  
+SELECT 'Sunbeam', NOW()UNION  
+SELECT 'Sunbrite', NOW()UNION  
+SELECT 'Sunpak', NOW()UNION  
+SELECT 'Sunsets', NOW()UNION  
+SELECT 'Supermicro', NOW()UNION  
+SELECT 'Supersonic', NOW()UNION  
+SELECT 'Swimline', NOW()UNION  
+SELECT 'SWISS ARMY', NOW()UNION  
+SELECT 'SYMANTEC', NOW()UNION  
+SELECT 'T Flight', NOW()UNION  
+SELECT 'T-Fal', NOW()UNION  
+SELECT 'TAG HEUER', NOW()UNION  
+SELECT 'TAKE 2', NOW()UNION  
+SELECT 'TARGUS', NOW()UNION  
+SELECT 'Tasco', NOW()UNION  
+SELECT 'Taylor', NOW()UNION  
+SELECT 'Taylormade Golf', NOW()UNION  
+SELECT 'TBD', NOW()UNION  
+SELECT 'tealight candle', NOW()UNION  
+SELECT 'Teknetics', NOW()UNION  
+SELECT 'terk', NOW()UNION  
+SELECT 'TEXAS INSTRUMENTS', NOW()UNION  
+SELECT 'Texsport', NOW()UNION  
+SELECT 'The First Years', NOW()UNION  
+SELECT 'THE SHARPER IMAGE', NOW()UNION  
+SELECT 'Thermador', NOW()UNION  
+SELECT 'Thermapak 13', NOW()UNION  
+SELECT 'THIERRY MUGLER', NOW()UNION  
+SELECT 'Thomas & friends', NOW()UNION  
+SELECT 'THORNE ELECTIC', NOW()UNION  
+SELECT 'THQ', NOW()UNION  
+SELECT 'THRUSTMASTER', NOW()UNION  
+SELECT 'TIMEX ', NOW()UNION  
+SELECT 'TINY LOVE', NOW()UNION  
+SELECT 'Tipperary', NOW()UNION  
+SELECT 'TISSOT', NOW()UNION  
+SELECT 'Titliest Golf', NOW()UNION  
+SELECT 'TIVO', NOW()UNION  
+SELECT 'Tomica', NOW()UNION  
+SELECT 'Tommy Bahama', NOW()UNION  
+SELECT 'TOMMY HILFIGER', NOW()UNION  
+SELECT 'TOMTOM', NOW()UNION  
+SELECT 'Tomy', NOW()UNION  
+SELECT 'Topps', NOW()UNION  
+SELECT 'Toshiba', NOW()UNION  
+SELECT 'Tour de france', NOW()UNION  
+SELECT 'Tranquility', NOW()UNION  
+SELECT 'Trans-X', NOW()UNION  
+SELECT 'Transcend', NOW()UNION  
+SELECT 'Tripp Lite', NOW()UNION  
+SELECT 'Tristar', NOW()UNION  
+SELECT 'Trueblue', NOW()UNION  
+SELECT 'Tuftex', NOW()UNION  
+SELECT 'TURTLE BEACH', NOW()UNION  
+SELECT 'Ultralink Cables', NOW()UNION  
+SELECT 'UNCLE MILTON', NOW()UNION  
+SELECT 'Uniden', NOW()UNION  
+SELECT 'Universal remote', NOW()UNION  
+SELECT 'UNIVERSAL REMOTE CONTROL', NOW()UNION  
+SELECT 'Uno', NOW()UNION  
+SELECT 'Unotron', NOW()UNION  
+SELECT 'Upper Deck', NOW()UNION  
+SELECT 'Urban Balance', NOW()UNION  
+SELECT 'URC', NOW()UNION  
+SELECT 'V-tech', NOW()UNION  
+SELECT 'VALENTINO', NOW()UNION  
+SELECT 'Valeo', NOW()UNION  
+SELECT 'Vanco', NOW()UNION  
+SELECT 'Vanity Fair', NOW()UNION  
+SELECT 'vantage Point', NOW()UNION  
+SELECT 'Vent-A-Hood', NOW()UNION  
+SELECT 'Ventura', NOW()UNION  
+SELECT 'Venturer', NOW()UNION  
+SELECT 'Venus', NOW()UNION  
+SELECT 'VERA WANG', NOW()UNION  
+SELECT 'Versatile', NOW()UNION  
+SELECT 'VICTORINOX', NOW()UNION  
+SELECT 'Victory', NOW()UNION  
+SELECT 'VIEWSONIC', NOW()UNION  
+SELECT 'Viking', NOW()UNION  
+SELECT 'VIPER', NOW()UNION  
+SELECT 'Vitality', NOW()UNION  
+SELECT 'VIVENDI UNIVERSAL', NOW()UNION  
+SELECT 'VIVITAR ', NOW()UNION  
+SELECT 'Vizio', NOW()UNION  
+SELECT 'Vornado', NOW()UNION  
+SELECT 'Vultec', NOW()UNION  
+SELECT 'VuPoint', NOW()UNION  
+SELECT 'Wacoal', NOW()UNION  
+SELECT 'WAHL', NOW()UNION  
+SELECT 'WARING PRO', NOW()UNION  
+SELECT 'WARNER BROTHERS', NOW()UNION  
+SELECT 'Waste King', NOW()UNION  
+SELECT 'Waterpik', NOW()UNION  
+SELECT 'Weather Channel', NOW()UNION  
+SELECT 'WEBER', NOW()UNION  
+SELECT 'Weightwatchers', NOW()UNION  
+SELECT 'WESTERN DIGITAL', NOW()UNION  
+SELECT 'westinghouse', NOW()UNION  
+SELECT 'Whirlpool', NOW()UNION  
+SELECT 'Wi-Ex', NOW()UNION  
+SELECT 'Wicked Tour', NOW()UNION  
+SELECT 'Wilshire', NOW()UNION  
+SELECT 'wilson', NOW()UNION  
+SELECT 'Wilson Golf', NOW()UNION  
+SELECT 'Wineguard', NOW()UNION  
+SELECT 'Winning Moves', NOW()UNION  
+SELECT 'WITTNAUER', NOW()UNION  
+SELECT 'Wolf', NOW()UNION  
+SELECT 'Wonderbra', NOW()UNION  
+SELECT 'Woody Wooden', NOW()UNION  
+SELECT 'Wrapsol', NOW()UNION  
+SELECT 'Wyrestorm', NOW()UNION  
+SELECT 'Xantech', NOW()UNION  
+SELECT 'XBOX 360', NOW()UNION  
+SELECT 'XFX', NOW()UNION  
+SELECT 'Yamaha', NOW()UNION  
+SELECT 'Yummie Tummie', NOW()UNION  
+SELECT 'YVES SAINT LAURENT', NOW()UNION  
+SELECT 'Z-line', NOW()UNION  
+SELECT 'Zagg', NOW()UNION  
+SELECT 'ZAZOO KIDS', NOW()UNION  
+SELECT 'Zen', NOW()UNION  
+SELECT 'Zenith', NOW()UNION  
+SELECT 'Zippo', NOW()UNION  
+SELECT 'ZOO GAMES', NOW()UNION  
+SELECT 'Zurich', NOW()UNION  
+SELECT 'Zuum media', NOW();  
+
+INSERT INTO master_catalog.brand(manufacturer_id,brand_name,is_active,create_date,update_date)
+SELECT '18','Unilever United Kingdom',1,NOW(),NOW()  UNION  
+SELECT '18','L''Oréal',1,NOW(),NOW()  UNION  
+SELECT '18','Kimberly-Clark Corp.',1,NOW(),NOW()  UNION  
+SELECT '18','Colgate-Palmolive',1,NOW(),NOW()  UNION  
+SELECT '18','Reckitt Benckiser',1,NOW(),NOW()  UNION  
+SELECT '18','Avon Products, Inc.',1,NOW(),NOW()  UNION  
+SELECT '18','Henkel',1,NOW(),NOW()  UNION  
+SELECT '18','Kao',1,NOW(),NOW()  UNION  
+SELECT '18','S.C. Johnson',1,NOW(),NOW()  UNION  
+SELECT '18','Estee Lauder',1,NOW(),NOW()  UNION  
+SELECT '18','Beiersdorf',1,NOW(),NOW()  UNION  
+SELECT '18','Johnson & Johnson',1,NOW(),NOW()  UNION  
+SELECT '18','Shiseido',1,NOW(),NOW()  UNION  
+SELECT '18','Amway',1,NOW(),NOW()  UNION  
+SELECT '18','Alcon Laboratories, Inc.',1,NOW(),NOW()  UNION  
+SELECT '18','Huneberg, Switzerland',1,NOW(),NOW()  UNION  
+SELECT '18','Ecolab',1,NOW(),NOW()  UNION  
+SELECT '18','Allergan',1,NOW(),NOW()  UNION  
+SELECT '18','LVMH',1,NOW(),NOW()  UNION  
+SELECT '18','Coty',1,NOW(),NOW()  UNION  
+SELECT '18','Liz Claiborne',1,NOW(),NOW()  UNION  
+SELECT '18','Wyeth Consumer Healthcare',1,NOW(),NOW()  UNION  
+SELECT '18','Bayer Consumer Health',1,NOW(),NOW()  UNION  
+SELECT '18','Nestle Health Care Nutrition',1,NOW(),NOW()  UNION  
+SELECT '18','Chanel',1,NOW(),NOW()  UNION  
+SELECT '18','Johnson Diversey',1,NOW(),NOW()  UNION  
+SELECT '18','Novartis Consumer Healthcare-OTC',1,NOW(),NOW()  UNION  
+SELECT '18','Scotts Miracle-Gro Co.',1,NOW(),NOW()  UNION  
+SELECT '18','Bausch & Lomb',1,NOW(),NOW()  UNION  
+SELECT '18','Rochester, NY',1,NOW(),NOW()  UNION  
+SELECT '18','Lion',1,NOW(),NOW()  UNION  
+SELECT '18','Mead Johnson Nutritionals',1,NOW(),NOW()  UNION  
+SELECT '18','Limited Brands',1,NOW(),NOW()  UNION  
+SELECT '18','Natura',1,NOW(),NOW()  UNION  
+SELECT '18','Spectrum Brands',1,NOW(),NOW()  UNION  
+SELECT '18','Mary Kay',1,NOW(),NOW()  UNION  
+SELECT '18','Clorox',1,NOW(),NOW()  UNION  
+SELECT '18','Yves Rocher',1,NOW(),NOW()  UNION  
+SELECT '18','Sara Lee',1,NOW(),NOW()  UNION  
+SELECT '18','GlaxoSmithKline',1,NOW(),NOW()  UNION  
+SELECT '18','Sun Products',1,NOW(),NOW()  UNION  
+SELECT '18','Church & Dwight',1,NOW(),NOW()  UNION  
+SELECT '18','Princeton, NJ',1,NOW(),NOW()  UNION  
+SELECT '18','Kose',1,NOW(),NOW()  UNION  
+SELECT '18','Central Garden & Pet Co.',1,NOW(),NOW()  UNION  
+SELECT '18','Oriflame',1,NOW(),NOW()  UNION  
+SELECT '18','Clarins',1,NOW(),NOW()  UNION  
+SELECT '18','Neuilly sur Seine, France',1,NOW(),NOW()  UNION  
+SELECT '18','Puig',1,NOW(),NOW()  UNION  
+SELECT '18','Amore Pacific',1,NOW(),NOW()  UNION  
+SELECT '18','Alberto-Culver Co.',1,NOW(),NOW()  UNION  
+SELECT '18','Perrigo',1,NOW(),NOW()  UNION  
+SELECT '18','Guthy-Renker',1,NOW(),NOW()  UNION  
+SELECT '18','Revlon',1,NOW(),NOW()  UNION  
+SELECT '18','LG',1,NOW(),NOW()  UNION  
+SELECT '18','Pierre Fabre',1,NOW(),NOW()  UNION  
+SELECT '18','Elizabeth Arden',1,NOW(),NOW()  UNION  
+SELECT '18','Bolton Group',1,NOW(),NOW()  UNION  
+SELECT '18','Blyth',1,NOW(),NOW()  UNION  
+SELECT '18','Ciba Vision Corporation',1,NOW(),NOW()  UNION  
+SELECT '18','Pola',1,NOW(),NOW()  UNION  
+SELECT '18','PZ Cussons',1,NOW(),NOW()  UNION  
+SELECT '18','Lornamead Group',1,NOW(),NOW()  UNION  
+SELECT '18','Tupperware',1,NOW(),NOW()  UNION  
+SELECT '18','Yankee Candle',1,NOW(),NOW()  UNION  
+SELECT '18','Sisley',1,NOW(),NOW()  UNION  
+SELECT '18','Sunstar',1,NOW(),NOW()  UNION  
+SELECT '18','Nu Skin',1,NOW(),NOW()  UNION  
+SELECT '18','John Paul Mitchell Systems',1,NOW(),NOW()  UNION  
+SELECT '18','Schering-Plough',1,NOW(),NOW()  UNION  
+SELECT '18','Menard',1,NOW(),NOW()  UNION  
+SELECT '18','Zep',1,NOW(),NOW()  UNION  
+SELECT '18','Colomer Group',1,NOW(),NOW()  UNION  
+SELECT '18','Bare Escentuals',1,NOW(),NOW()  UNION  
+SELECT '18','Mandom Corp',1,NOW(),NOW()  UNION  
+SELECT '18','Markwins',1,NOW(),NOW()  UNION  
+SELECT '18','YSL',1,NOW(),NOW()  UNION  
+SELECT '18','Jafra',1,NOW(),NOW()  UNION  
+SELECT '18','Inter Parfums, Inc.',1,NOW(),NOW()  UNION  
+SELECT '18','OPI',1,NOW(),NOW()  UNION  
+SELECT '18','Hartz Mountain Corp.',1,NOW(),NOW()  UNION  
+SELECT '18','Chattem',1,NOW(),NOW()  UNION  
+SELECT '18','Combe Inc.',1,NOW(),NOW()  UNION  
+SELECT '18','Energizer Holdings Inc.',1,NOW(),NOW()  UNION  
+SELECT '18','WD-40',1,NOW(),NOW()  UNION  
+SELECT '18','Prestige Brands',1,NOW(),NOW()  UNION  
+SELECT '18','Marietta Corp.',1,NOW(),NOW()  UNION  
+SELECT '18','Phoenix Brands',1,NOW(),NOW()  UNION  
+SELECT '18','Tigi',1,NOW(),NOW()  UNION  
+SELECT '18','American International',1,NOW(),NOW()  UNION  
+SELECT '18','Turtle Wax',1,NOW(),NOW()  UNION  
+SELECT '18','H2O Plus',1,NOW(),NOW()  UNION  
+SELECT '18','Philosophy, Inc.',1,NOW(),NOW()  UNION  
+SELECT '18','Parlux',1,NOW(),NOW()  UNION  
+SELECT '18','Betco',1,NOW(),NOW()  UNION  
+SELECT '18','Seventh Generation',1,NOW(),NOW()  UNION  
+SELECT '18','Nice Pak Products Inc.',1,NOW(),NOW()  UNION  
+SELECT '18','Herbalife',1,NOW(),NOW()  UNION  
+SELECT '18','Gojo',1,NOW(),NOW()  UNION  
+SELECT '18','State Industrial Products',1,NOW(),NOW()  UNION  
+SELECT '18','Bonne Bell',1,NOW(),NOW()  UNION  
+SELECT '18','Spartan Chemical Co.',1,NOW(),NOW()  UNION  
+SELECT '18','Hain Celestial',1,NOW(),NOW()  UNION  
+SELECT '18','Physician''s Formula',1,NOW(),NOW()  UNION  
+SELECT '18','Sebastian International',1,NOW(),NOW()  UNION  
+SELECT '18','Obagi',1,NOW(),NOW()  UNION  
+SELECT '18','Method Home Products',1,NOW(),NOW()  UNION  
+SELECT '18','Merle Norman',1,NOW(),NOW()  UNION  
+SELECT '18','Perricone MD Cosmeceuticals',1,NOW(),NOW()  UNION  
+SELECT '18','Rochester Midland Corp.',1,NOW(),NOW()  UNION  
+SELECT '18','Rochester, NY',1,NOW(),NOW()  UNION  
+SELECT '18','Murad',1,NOW(),NOW()  UNION  
+SELECT '18','CCA Industries',1,NOW(),NOW()  UNION  
+SELECT '18','Borba',1,NOW(),NOW()  UNION  
+SELECT '18','Blistex',1,NOW(),NOW()  UNION  
+SELECT '18','Gillette',1,NOW(),NOW()  UNION  
+SELECT '18','Pantene',1,NOW(),NOW()  UNION  
+SELECT '18','Olay',1,NOW(),NOW()  UNION  
+SELECT '18','DDF',1,NOW(),NOW()  UNION  
+SELECT '18','Head & Shoulders',1,NOW(),NOW()  UNION  
+SELECT '18','Hugo Boss',1,NOW(),NOW()  UNION  
+SELECT '18','Secret',1,NOW(),NOW()  UNION  
+SELECT '18','SK-II',1,NOW(),NOW()  UNION  
+SELECT '18','Zest',1,NOW(),NOW()  UNION  
+SELECT '18','Safeguard',1,NOW(),NOW()  UNION  
+SELECT '18','Rejoice',1,NOW(),NOW()  UNION  
+SELECT '18','Clairol',1,NOW(),NOW()  UNION  
+SELECT '18','Herbal Essences',1,NOW(),NOW()  UNION  
+SELECT '18','Max Factor',1,NOW(),NOW()  UNION  
+SELECT '18','Cover Girl',1,NOW(),NOW()  UNION  
+SELECT '18','Old Spice',1,NOW(),NOW()  UNION  
+SELECT '18','Wella',1,NOW(),NOW()  UNION  
+SELECT '18','Aussie',1,NOW(),NOW()  UNION  
+SELECT '18','Tide',1,NOW(),NOW()  UNION  
+SELECT '18','Ariel',1,NOW(),NOW()  UNION  
+SELECT '18','Downy',1,NOW(),NOW()  UNION  
+SELECT '18','Lenor',1,NOW(),NOW()  UNION  
+SELECT '18','Gain',1,NOW(),NOW()  UNION  
+SELECT '18','Cascade',1,NOW(),NOW()  UNION  
+SELECT '18','Ace',1,NOW(),NOW()  UNION  
+SELECT '18','Cheer',1,NOW(),NOW()  UNION  
+SELECT '18','Bold',1,NOW(),NOW()  UNION  
+SELECT '18','Swiffer',1,NOW(),NOW()  UNION  
+SELECT '18','Bounce',1,NOW(),NOW()  UNION  
+SELECT '18','Dash',1,NOW(),NOW()  UNION  
+SELECT '18','Dawn',1,NOW(),NOW()  UNION  
+SELECT '18','Fairy',1,NOW(),NOW()  UNION  
+SELECT '18','Joy',1,NOW(),NOW()  UNION  
+SELECT '18','Febreze',1,NOW(),NOW()  UNION  
+SELECT '18','Era',1,NOW(),NOW()  UNION  
+SELECT '18','Dreft',1,NOW(),NOW()  UNION  
+SELECT '18','Daz',1,NOW(),NOW()  UNION  
+SELECT '18','Vizir',1,NOW(),NOW()  UNION  
+SELECT '18','Salvo',1,NOW(),NOW()  UNION  
+SELECT '18','Mr. Proper',1,NOW(),NOW()  UNION  
+SELECT '18','Mr. Clean',1,NOW(),NOW()  UNION  
+SELECT '18','Flash',1,NOW(),NOW()  UNION  
+SELECT '18','Viakal',1,NOW(),NOW()  UNION  
+SELECT '18','Alomatik',1,NOW(),NOW()  UNION  
+SELECT '18','Ivory',1,NOW(),NOW()  UNION  
+SELECT '18','Maestro Limpio',1,NOW(),NOW()  UNION  
+SELECT '18','Rindex',1,NOW(),NOW()  UNION  
+SELECT '18','Crest',1,NOW(),NOW()  UNION  
+SELECT '18','Vicks',1,NOW(),NOW()  UNION  
+SELECT '22','Becel',1,NOW(),NOW()  UNION  
+SELECT '22','Flora',1,NOW(),NOW()  UNION  
+SELECT '22','Bertolli',1,NOW(),NOW()  UNION  
+SELECT '22','Knorr',1,NOW(),NOW()  UNION  
+SELECT '22','Blue Band',1,NOW(),NOW()  UNION  
+SELECT '22','Rama',1,NOW(),NOW()  UNION  
+SELECT '22','Heartbrand',1,NOW(),NOW()  UNION  
+SELECT '22','Lipton',1,NOW(),NOW()  UNION  
+SELECT '22','Slim-Fast',1,NOW(),NOW()  UNION  
+SELECT '22','Hellmann''s',1,NOW(),NOW()  UNION  
+SELECT '22','Amora',1,NOW(),NOW()  UNION  
+SELECT '22','Axe',1,NOW(),NOW()  UNION  
+SELECT '22','Dove',1,NOW(),NOW()  UNION  
+SELECT '22','Lifebouy',1,NOW(),NOW()  UNION  
+SELECT '22','Lux',1,NOW(),NOW()  UNION  
+SELECT '22','Pond''s',1,NOW(),NOW()  UNION  
+SELECT '22','Rexona',1,NOW(),NOW()  UNION  
+SELECT '22','Signal',1,NOW(),NOW()  UNION  
+SELECT '22','Close Up',1,NOW(),NOW()  UNION  
+SELECT '22','Sunsilk',1,NOW(),NOW()  UNION  
+SELECT '22','Vaseline',1,NOW(),NOW()  UNION  
+SELECT '22','Cif',1,NOW(),NOW()  UNION  
+SELECT '22','Comfort',1,NOW(),NOW()  UNION  
+SELECT '22','Domestos',1,NOW(),NOW()  UNION  
+SELECT '22','Sunlight',1,NOW(),NOW()  UNION  
+SELECT '22','Omo',1,NOW(),NOW()  UNION  
+SELECT '22','Radiant',1,NOW(),NOW()  UNION  
+SELECT '22','Surf',1,NOW(),NOW()  UNION  
+SELECT '12','L''Oreal Paris',1,NOW(),NOW()  UNION  
+SELECT '12','Biotherm',1,NOW(),NOW()  UNION  
+SELECT '12','Cacharel',1,NOW(),NOW()  UNION  
+SELECT '12','Diesel',1,NOW(),NOW()  UNION  
+SELECT '12','Dermablend',1,NOW(),NOW()  UNION  
+SELECT '12','Garnier',1,NOW(),NOW()  UNION  
+SELECT '12','Giorgio Armani Perfumes and Cosmetics',1,NOW(),NOW()  UNION  
+SELECT '12','Helena Rubinstein',1,NOW(),NOW()  UNION  
+SELECT '12','Inneov',1,NOW(),NOW()  UNION  
+SELECT '12','Keraskin Esthetics',1,NOW(),NOW()  UNION  
+SELECT '12','Kerastase',1,NOW(),NOW()  UNION  
+SELECT '12','Keihl''s Since 1851',1,NOW(),NOW()  UNION  
+SELECT '12','L''Oreal Professionnel',1,NOW(),NOW()  UNION  
+SELECT '12','L''Oreal Technique',1,NOW(),NOW()  UNION  
+SELECT '12','la Rouche-Posay',1,NOW(),NOW()  UNION  
+SELECT '12','Lancome',1,NOW(),NOW()  UNION  
+SELECT '12','Le Club Des Createurs',1,NOW(),NOW()  UNION  
+SELECT '12','Matrix',1,NOW(),NOW()  UNION  
+SELECT '12','Maybelline New York',1,NOW(),NOW()  UNION  
+SELECT '12','Mizani',1,NOW(),NOW()  UNION  
+SELECT '12','Ralph Lauren Fragrances',1,NOW(),NOW()  UNION  
+SELECT '12','Redken',1,NOW(),NOW()  UNION  
+SELECT '12','Sanoflore',1,NOW(),NOW()  UNION  
+SELECT '12','Shu Uemura',1,NOW(),NOW()  UNION  
+SELECT '12','Skinceuticals',1,NOW(),NOW()  UNION  
+SELECT '12','Softsheen-Carson',1,NOW(),NOW()  UNION  
+SELECT '12','Vichy',1,NOW(),NOW()  UNION  
+SELECT '12','Viktor & Rolf Parfums',1,NOW(),NOW()  UNION  
+SELECT '12','YSL Beaute',1,NOW(),NOW()  UNION  
+SELECT '11','Cottenlle',1,NOW(),NOW()  UNION  
+SELECT '11','Depend',1,NOW(),NOW()  UNION  
+SELECT '11','GoodNites',1,NOW(),NOW()  UNION  
+SELECT '11','Huggies',1,NOW(),NOW()  UNION  
+SELECT '11','Kleenex',1,NOW(),NOW()  UNION  
+SELECT '11','Kotex',1,NOW(),NOW()  UNION  
+SELECT '11','Little Swimmers',1,NOW(),NOW()  UNION  
+SELECT '11','Poise',1,NOW(),NOW()  UNION  
+SELECT '11','Pull-Ups',1,NOW(),NOW()  UNION  
+SELECT '11','Scott',1,NOW(),NOW()  UNION  
+SELECT '11','Viva',1,NOW(),NOW()  UNION  
+SELECT '19','Veet',1,NOW(),NOW()  UNION  
+SELECT '19','Dettol',1,NOW(),NOW()  UNION  
+SELECT '19','Clearasil',1,NOW(),NOW()  UNION  
+SELECT '19','Nurofen',1,NOW(),NOW()  UNION  
+SELECT '19','Strepsils and Gaviscon',1,NOW(),NOW()  UNION  
+SELECT '19','Calgon',1,NOW(),NOW()  UNION  
+SELECT '19','Vanish',1,NOW(),NOW()  UNION  
+SELECT '19','Spray''n Wash',1,NOW(),NOW()  UNION  
+SELECT '19','Woolite',1,NOW(),NOW()  UNION  
+SELECT '19','Cillit Bang',1,NOW(),NOW()  UNION  
+SELECT '19','Lysol',1,NOW(),NOW()  UNION  
+SELECT '19','Harpic',1,NOW(),NOW()  UNION  
+SELECT '19','Calgonit',1,NOW(),NOW()  UNION  
+SELECT '19','Finish',1,NOW(),NOW()  UNION  
+SELECT '19','Electrasol',1,NOW(),NOW()  UNION  
+SELECT '19','Airwick',1,NOW(),NOW()  UNION  
+SELECT '19','Mortein',1,NOW(),NOW()  UNION  
+SELECT '10','Sofina',1,NOW(),NOW()  UNION  
+SELECT '10','Kanebo',1,NOW(),NOW()  UNION  
+SELECT '10','Molton Brown',1,NOW(),NOW()  UNION  
+SELECT '10','Biore',1,NOW(),NOW()  UNION  
+SELECT '10','Asience',1,NOW(),NOW()  UNION  
+SELECT '10','Jergens',1,NOW(),NOW()  UNION  
+SELECT '10','John Frieda',1,NOW(),NOW()  UNION  
+SELECT '10','Goldwell',1,NOW(),NOW()  UNION  
+SELECT '10','Econa',1,NOW(),NOW()  UNION  
+SELECT '10','Merries',1,NOW(),NOW()  UNION  
+SELECT '10','Laurier',1,NOW(),NOW()  UNION  
+SELECT '10','Attack',1,NOW(),NOW()  UNION  
+SELECT '10','Haiter',1,NOW(),NOW()  UNION  
+SELECT '10','Magiclean',1,NOW(),NOW()  UNION  
+SELECT '7','Estée Lauder',1,NOW(),NOW()  UNION  
+SELECT '7','Aramis',1,NOW(),NOW()  UNION  
+SELECT '7','Clinique',1,NOW(),NOW()  UNION  
+SELECT '7','Prescriptives',1,NOW(),NOW()  UNION  
+SELECT '7','Lab Series Skin care for Men',1,NOW(),NOW()  UNION  
+SELECT '7','Origins',1,NOW(),NOW()  UNION  
+SELECT '7','Tommy Hilfiger',1,NOW(),NOW()  UNION  
+SELECT '7','MAC',1,NOW(),NOW()  UNION  
+SELECT '7','Kiton',1,NOW(),NOW()  UNION  
+SELECT '7','Bobbi Brown',1,NOW(),NOW()  UNION  
+SELECT '7','La Mer',1,NOW(),NOW()  UNION  
+SELECT '7','Donna Karan',1,NOW(),NOW()  UNION  
+SELECT '7','Aveda',1,NOW(),NOW()  UNION  
+SELECT '7','Jo Malone',1,NOW(),NOW()  UNION  
+SELECT '7','Bumble and Bumble',1,NOW(),NOW()  UNION  
+SELECT '7','Michael Kors',1,NOW(),NOW()  UNION  
+SELECT '7','Darphin',1,NOW(),NOW()  UNION  
+SELECT '7','American Beauty',1,NOW(),NOW()  UNION  
+SELECT '7','Flirt!',1,NOW(),NOW()  UNION  
+SELECT '7','Good Skin',1,NOW(),NOW()  UNION  
+SELECT '7','Grassroots',1,NOW(),NOW()  UNION  
+SELECT '7','Sean John Fragrances',1,NOW(),NOW()  UNION  
+SELECT '7','Missoni',1,NOW(),NOW()  UNION  
+SELECT '7','Daisy Fuentes',1,NOW(),NOW()  UNION  
+SELECT '7','Tom Ford',1,NOW(),NOW()  UNION  
+SELECT '7','Mustang',1,NOW(),NOW()  UNION  
+SELECT '7','Coach',1,NOW(),NOW()  UNION  
+SELECT '7','Ojon',1,NOW(),NOW()  UNION  
+SELECT '7','Eyes by Design',1,NOW(),NOW()  UNION  
+SELECT '3','Hansaplast',1,NOW(),NOW()  UNION  
+SELECT '3','SBT',1,NOW(),NOW()  UNION  
+SELECT '3','LaPrairie',1,NOW(),NOW()  UNION  
+SELECT '3','Eucerin',1,NOW(),NOW()  UNION  
+SELECT '3','Nivea for Men',1,NOW(),NOW()  UNION  
+SELECT '3','Labello',1,NOW(),NOW()  UNION  
+SELECT '3','Florena',1,NOW(),NOW()  UNION  
+SELECT '3','8x5',1,NOW(),NOW()  UNION  
+SELECT '3','SLEK',1,NOW(),NOW()  UNION  
+SELECT '3','Nivea',1,NOW(),NOW()  UNION  
+SELECT '9','Aveeno',1,NOW(),NOW()  UNION  
+SELECT '9','Neutrogena',1,NOW(),NOW()  UNION  
+SELECT '9','Clean & Clear',1,NOW(),NOW()  UNION  
+SELECT '9','Johnson’s',1,NOW(),NOW()  UNION  
+SELECT '9','Balmex',1,NOW(),NOW()  UNION  
+SELECT '9','Penatan',1,NOW(),NOW()  UNION  
+SELECT '9','Natusan',1,NOW(),NOW()  UNION  
+SELECT '9','Piz Buin',1,NOW(),NOW()  UNION  
+SELECT '9','Sundown',1,NOW(),NOW()  UNION  
+SELECT '9','Reach',1,NOW(),NOW()  UNION  
+SELECT '9','RoC',1,NOW(),NOW()  UNION  
+SELECT '9','Shower to Shower',1,NOW(),NOW()  UNION  
+SELECT '1','RESTASIS',1,NOW(),NOW()  UNION  
+SELECT '1','Lumigan',1,NOW(),NOW()  UNION  
+SELECT '1','OPTIVE',1,NOW(),NOW()  UNION  
+SELECT '1','REFRESH',1,NOW(),NOW()  UNION  
+SELECT '1','ALPHAGAN',1,NOW(),NOW()  UNION  
+SELECT '1','COMBIGAN',1,NOW(),NOW()  UNION  
+SELECT '1','LUMIGAN',1,NOW(),NOW()  UNION  
+SELECT '1','ACULARLS',1,NOW(),NOW()  UNION  
+SELECT '1','ACUVAIL',1,NOW(),NOW()  UNION  
+SELECT '1','ALOCRIL',1,NOW(),NOW()  UNION  
+SELECT '14','Vuitton',1,NOW(),NOW()  UNION  
+SELECT '14','11 Cane',1,NOW(),NOW()  UNION  
+SELECT '14','Acquia di parma',1,NOW(),NOW()  UNION  
+SELECT '14','Cape Mentelle',1,NOW(),NOW()  UNION  
+SELECT '14','Hublot',1,NOW(),NOW()  UNION  
+SELECT '14','Diro Watches',1,NOW(),NOW()  UNION  
+SELECT '14','Donna Karan',1,NOW(),NOW()  UNION  
+SELECT '14','Fred',1,NOW(),NOW()  UNION  
+SELECT '14','Hennessy',1,NOW(),NOW()  UNION  
+SELECT '14','Krug',1,NOW(),NOW()  UNION  
+SELECT '14','Numanthia',1,NOW(),NOW()  UNION  
+SELECT '14','Make Up For Ever',1,NOW(),NOW()  UNION  
+SELECT '14','Parfums Christian Dior',1,NOW(),NOW()  UNION  
+SELECT '14','Sephora',1,NOW(),NOW()  UNION  
+SELECT '14','The Glenmorangie Co.',1,NOW(),NOW()  UNION  
+SELECT '14','Benefit Cosmetics',1,NOW(),NOW()  UNION  
+SELECT '14','Celine',1,NOW(),NOW()  UNION  
+SELECT '14','Groupe Les Echos',1,NOW(),NOW()  UNION  
+SELECT '14','Dom Perignon',1,NOW(),NOW()  UNION  
+SELECT '14','Fresh',1,NOW(),NOW()  UNION  
+SELECT '14','Kenzo',1,NOW(),NOW()  UNION  
+SELECT '14','Loewe',1,NOW(),NOW()  UNION  
+SELECT '14','Moet & Chandon',1,NOW(),NOW()  UNION  
+SELECT '14','Thomas Pink',1,NOW(),NOW()  UNION  
+SELECT '14','Berluti',1,NOW(),NOW()  UNION  
+SELECT '14','Cheval des Andes',1,NOW(),NOW()  UNION  
+SELECT '14','Domaine Chandon Australia',1,NOW(),NOW()  UNION  
+SELECT '14','Marc Jacobs',1,NOW(),NOW()  UNION  
+SELECT '14','Parfums Givenchy',1,NOW(),NOW()  UNION  
+SELECT '14','Stefanobi',1,NOW(),NOW()  UNION  
+SELECT '14','Bodegas Chandon',1,NOW(),NOW()  UNION  
+SELECT '14','Belvedere',1,NOW(),NOW()  UNION  
+SELECT '14','Cloudy Bay',1,NOW(),NOW()  UNION  
+SELECT '14','Newton',1,NOW(),NOW()  UNION  
+SELECT '14','Tag Hueuer',1,NOW(),NOW()  UNION  
+SELECT '14','Veuve Clicquot',1,NOW(),NOW()  UNION  
+SELECT '14','Chateau d''Yquem',1,NOW(),NOW()  UNION  
+SELECT '14','De Beers',1,NOW(),NOW()  UNION  
+SELECT '14','Mercier',1,NOW(),NOW()  UNION  
+SELECT '14','Perfumes Loewe',1,NOW(),NOW()  UNION  
+SELECT '14','Le Bon Marche',1,NOW(),NOW()  UNION  
+SELECT '14','Chopin',1,NOW(),NOW()  UNION  
+SELECT '14','Domaine Chandon California',1,NOW(),NOW()  UNION  
+SELECT '14','Emillio Pucci',1,NOW(),NOW()  UNION  
+SELECT '14','Givenchy',1,NOW(),NOW()  UNION  
+SELECT '14','Louis Vuitton',1,NOW(),NOW()  UNION  
+SELECT '14','Runart',1,NOW(),NOW()  UNION  
+SELECT '14','Terrazas de los Andes',1,NOW(),NOW()  UNION  
+SELECT '14','Chaumet',1,NOW(),NOW()  UNION  
+SELECT '14','DFS',1,NOW(),NOW()  UNION  
+SELECT '14','Fendi',1,NOW(),NOW()  UNION  
+SELECT '14','Guerlain',1,NOW(),NOW()  UNION  
+SELECT '14','Kenzo Parfums',1,NOW(),NOW()  UNION  
+SELECT '14','Samaritaine',1,NOW(),NOW()  UNION  
+SELECT '14','Zenith',1,NOW(),NOW()  UNION  
+SELECT '5','Baby Phat',1,NOW(),NOW()  UNION  
+SELECT '5','Balenciaga',1,NOW(),NOW()  UNION  
+SELECT '5','Calvin Klein',1,NOW(),NOW()  UNION  
+SELECT '5','Cerruti',1,NOW(),NOW()  UNION  
+SELECT '5','Chloé',1,NOW(),NOW()  UNION  
+SELECT '5','Chopard',1,NOW(),NOW()  UNION  
+SELECT '5','Davidoff',1,NOW(),NOW()  UNION  
+SELECT '5','Jennifer Lopez',1,NOW(),NOW()  UNION  
+SELECT '5','Jette Joop',1,NOW(),NOW()  UNION  
+SELECT '5','Jil Sander',1,NOW(),NOW()  UNION  
+SELECT '5','Joop!',1,NOW(),NOW()  UNION  
+SELECT '5','Karl Lagerfeld',1,NOW(),NOW()  UNION  
+SELECT '5','Kenneth Cole',1,NOW(),NOW()  UNION  
+SELECT '5','L.A.M.B. fragrance Gwen Stefani',1,NOW(),NOW()  UNION  
+SELECT '5','Lancaster',1,NOW(),NOW()  UNION  
+SELECT '5','Marc Jacobs',1,NOW(),NOW()  UNION  
+SELECT '5','Nautica',1,NOW(),NOW()  UNION  
+SELECT '5','Nikos',1,NOW(),NOW()  UNION  
+SELECT '5','Phat Farm',1,NOW(),NOW()  UNION  
+SELECT '5','Sarah Jessica Parker',1,NOW(),NOW()  UNION  
+SELECT '5','Vera Wang',1,NOW(),NOW()  UNION  
+SELECT '5','Vivienne Westwood',1,NOW(),NOW()  UNION  
+SELECT '5','Adidas',1,NOW(),NOW()  UNION  
+SELECT '5','Aspen',1,NOW(),NOW()  UNION  
+SELECT '5','Astor',1,NOW(),NOW()  UNION  
+SELECT '5','Celine Dion',1,NOW(),NOW()  UNION  
+SELECT '5','Chupa Chups',1,NOW(),NOW()  UNION  
+SELECT '5','David & Victoria Beckham',1,NOW(),NOW()  UNION  
+SELECT '5','Desperate Housewives',1,NOW(),NOW()  UNION  
+SELECT '5','Esprit',1,NOW(),NOW()  UNION  
+SELECT '5','Ex’cla.ma’tion',1,NOW(),NOW()  UNION  
+SELECT '5','Halle Berry',1,NOW(),NOW()  UNION  
+SELECT '5','Isabella Rosselini',1,NOW(),NOW()  UNION  
+SELECT '5','Jovan',1,NOW(),NOW()  UNION  
+SELECT '5','Kate Moss',1,NOW(),NOW()  UNION  
+SELECT '5','Kylie Minogue',1,NOW(),NOW()  UNION  
+SELECT '5','Miss Sixty',1,NOW(),NOW()  UNION  
+SELECT '5','Miss Sporty',1,NOW(),NOW()  UNION  
+SELECT '5','Pierre Cardin',1,NOW(),NOW()  UNION  
+SELECT '5','Playboy',1,NOW(),NOW()  UNION  
+SELECT '5','Rimmel',1,NOW(),NOW()  UNION  
+SELECT '5','Shania Twain',1,NOW(),NOW()  UNION  
+SELECT '5','Stetson',1,NOW(),NOW()  UNION  
+SELECT '5','Vanilla Fields',1,NOW(),NOW()  UNION  
+SELECT '24','Advil',1,NOW(),NOW()  UNION  
+SELECT '24','Alavert',1,NOW(),NOW()  UNION  
+SELECT '24','Anbesol',1,NOW(),NOW()  UNION  
+SELECT '24','BeneFIX',1,NOW(),NOW()  UNION  
+SELECT '24','Caltrate',1,NOW(),NOW()  UNION  
+SELECT '24','Centrum',1,NOW(),NOW()  UNION  
+SELECT '24','ChapStick',1,NOW(),NOW()  UNION  
+SELECT '24','Dimetapp',1,NOW(),NOW()  UNION  
+SELECT '24','Dristan',1,NOW(),NOW()  UNION  
+SELECT '24','FiberCon',1,NOW(),NOW()  UNION  
+SELECT '24','Preparation H',1,NOW(),NOW()  UNION  
+SELECT '24','Primatene',1,NOW(),NOW()  UNION  
+SELECT '24','Robitussin',1,NOW(),NOW()  UNION  
+SELECT '24','Thermacare',1,NOW(),NOW()  UNION  
+SELECT '2','Bayer Aspirin',1,NOW(),NOW()  UNION  
+SELECT '2','Aleve',1,NOW(),NOW()  UNION  
+SELECT '2','Flanax',1,NOW(),NOW()  UNION  
+SELECT '2','Apronax',1,NOW(),NOW()  UNION  
+SELECT '2','Alka-Seltzer Plus',1,NOW(),NOW()  UNION  
+SELECT '2','Bactine',1,NOW(),NOW()  UNION  
+SELECT '2','RID',1,NOW(),NOW()  UNION  
+SELECT '2','Phillips'' Milk of Magnesia',1,NOW(),NOW()  UNION  
+SELECT '2','Midol',1,NOW(),NOW()  UNION  
+SELECT '2','Alka-Seltzer',1,NOW(),NOW()  UNION  
+SELECT '2','Talcid',1,NOW(),NOW()  UNION  
+SELECT '2','Rennie',1,NOW(),NOW()  UNION  
+SELECT '2','Canesten',1,NOW(),NOW()  UNION  
+SELECT '2','Bepanthen',1,NOW(),NOW()  UNION  
+SELECT '2','Bepanthol',1,NOW(),NOW()  UNION  
+SELECT '2','One A Day vitamins',1,NOW(),NOW()  UNION  
+SELECT '2','Flintstones vitamins',1,NOW(),NOW()  UNION  
+SELECT '2','Supradyn',1,NOW(),NOW()  UNION  
+SELECT '2','Redoxon',1,NOW(),NOW()  UNION  
+SELECT '2','Berocca',1,NOW(),NOW()  UNION  
+SELECT '2','Cal-D-Vita',1,NOW(),NOW()  UNION  
+SELECT '2','Elevit',1,NOW(),NOW()  UNION  
+SELECT '2','Vital 50 Plus',1,NOW(),NOW()  UNION  
+SELECT '2','CardioAspirin',1,NOW(),NOW()  UNION  
+SELECT '16','Benefiber',1,NOW(),NOW()  UNION  
+SELECT '16','Buckley''s',1,NOW(),NOW()  UNION  
+SELECT '16','Bufferin',1,NOW(),NOW()  UNION  
+SELECT '16','Calcium Sandoz',1,NOW(),NOW()  UNION  
+SELECT '16','Denavir',1,NOW(),NOW()  UNION  
+SELECT '16','Vectavir',1,NOW(),NOW()  UNION  
+SELECT '16','Desenex',1,NOW(),NOW()  UNION  
+SELECT '16','Excedrin',1,NOW(),NOW()  UNION  
+SELECT '16','Ex-Lax',1,NOW(),NOW()  UNION  
+SELECT '16','Fenistil',1,NOW(),NOW()  UNION  
+SELECT '16','Gas-X',1,NOW(),NOW()  UNION  
+SELECT '16','Keri',1,NOW(),NOW()  UNION  
+SELECT '16','Lamisil',1,NOW(),NOW()  UNION  
+SELECT '16','Maalox',1,NOW(),NOW()  UNION  
+SELECT '16','Nicotinell',1,NOW(),NOW()  UNION  
+SELECT '16','Thrive',1,NOW(),NOW()  UNION  
+SELECT '16','Habitrol',1,NOW(),NOW()  UNION  
+SELECT '16','Otrivin',1,NOW(),NOW()  UNION  
+SELECT '16','Perdiem',1,NOW(),NOW()  UNION  
+SELECT '16','Prodiem',1,NOW(),NOW()  UNION  
+SELECT '16','Slow Fe',1,NOW(),NOW()  UNION  
+SELECT '16','Theraflu',1,NOW(),NOW()  UNION  
+SELECT '16','Neocitran',1,NOW(),NOW()  UNION  
+SELECT '16','Triaminic',1,NOW(),NOW()  UNION  
+SELECT '16','Venoruton',1,NOW(),NOW()  UNION  
+SELECT '16','Voltaren Emulgel',1,NOW(),NOW()  UNION  
+SELECT '16','4-Way',1,NOW(),NOW()  UNION  
+SELECT '16','Ascriptin',1,NOW(),NOW()  UNION  
+SELECT '16','Comtrex',1,NOW(),NOW()  UNION  
+SELECT '16','Doan''s Lamislik',1,NOW(),NOW()  UNION  
+SELECT '16','Mineral Ice',1,NOW(),NOW()  UNION  
+SELECT '16','Myoflex',1,NOW(),NOW()  UNION  
+SELECT '16','No-Doz',1,NOW(),NOW()  UNION  
+SELECT '16','Tavist',1,NOW(),NOW()  UNION  
+SELECT '16','Vagistat',1,NOW(),NOW()  UNION  
+SELECT '16','Delsym',1,NOW(),NOW()  UNION  
+SELECT '16','Lac-Hydrin',1,NOW(),NOW()  UNION  
+SELECT '16','Lipactin',1,NOW(),NOW()  UNION  
+SELECT '15','Enfamil',1,NOW(),NOW()  UNION  
+SELECT '15','Lactum',1,NOW(),NOW()  UNION  
+SELECT '20','Revlon',1,NOW(),NOW()  UNION  
+SELECT '20','Almay',1,NOW(),NOW()  UNION  
+SELECT '20','Charlie',1,NOW(),NOW()  UNION  
+SELECT '20','Jean Naté',1,NOW(),NOW()  UNION  
+SELECT '6','Elizabeth Arden',1,NOW(),NOW()  UNION  
+SELECT '6','Red Door',1,NOW(),NOW()  UNION  
+SELECT '6','5th Avenue',1,NOW(),NOW()  UNION  
+SELECT '6','Britney Spears',1,NOW(),NOW()  UNION  
+SELECT '6','Hilary Duff',1,NOW(),NOW()  UNION  
+SELECT '6','Danielle Steel',1,NOW(),NOW()  UNION  
+SELECT '6','Giorgio',1,NOW(),NOW()  UNION  
+SELECT '6','Daytona 500',1,NOW(),NOW()  UNION  
+SELECT '6','Hummer',1,NOW(),NOW()  UNION  
+SELECT '6','PS',1,NOW(),NOW()  UNION  
+SELECT '6','Alfred Sung',1,NOW(),NOW()  UNION  
+SELECT '6','Badgley Mischka',1,NOW(),NOW()  UNION  
+SELECT '6','Bob Mackie',1,NOW(),NOW()  UNION  
+SELECT '6','Gant',1,NOW(),NOW()  UNION  
+SELECT '6','Halston',1,NOW(),NOW()  UNION  
+SELECT '6','Geoffrey Beene',1,NOW(),NOW()  UNION  
+SELECT '13','Brisk',1,NOW(),NOW()  UNION  
+SELECT '13','Bristows',1,NOW(),NOW()  UNION  
+SELECT '13','Crisan',1,NOW(),NOW()  UNION  
+SELECT '13','Finesse',1,NOW(),NOW()  UNION  
+SELECT '13','Harmony',1,NOW(),NOW()  UNION  
+SELECT '13','Herbal Essences',1,NOW(),NOW()  UNION  
+SELECT '13','Once',1,NOW(),NOW()  UNION  
+SELECT '13','Silvikrin',1,NOW(),NOW()  UNION  
+SELECT '13','Vosene',1,NOW(),NOW()  UNION  
+SELECT '25','Yankee Candle',1,NOW(),NOW()  UNION  
+SELECT '25','Aroma Naturals',1,NOW(),NOW()  UNION  
+SELECT '8','Paul Mitchell',1,NOW(),NOW()  UNION  
+SELECT '8','Tea Tree',1,NOW(),NOW()  UNION  
+SELECT '8','Modern Elixirs',1,NOW(),NOW()  UNION  
+SELECT '4','Aqua Velva',1,NOW(),NOW()  UNION  
+SELECT '4','Lanane',1,NOW(),NOW()  UNION  
+SELECT '4','Grecian 5',1,NOW(),NOW()  UNION  
+SELECT '4','PowerHold',1,NOW(),NOW()  UNION  
+SELECT '4','Cepacol',1,NOW(),NOW()  UNION  
+SELECT '4','Scalpicin',1,NOW(),NOW()  UNION  
+SELECT '4','LiceMD',1,NOW(),NOW()  UNION  
+SELECT '4','Johnson’s Foot Soap',1,NOW(),NOW()  UNION  
+SELECT '4','Sea-Bond',1,NOW(),NOW()  UNION  
+SELECT '4','Just for Men',1,NOW(),NOW()  UNION  
+SELECT '4','Grecian Formula',1,NOW(),NOW()  UNION  
+SELECT '4','Vagisil',1,NOW(),NOW()  UNION  
+SELECT '4','Lectric Shave',1,NOW(),NOW()  UNION  
+SELECT '4','Lanacort',1,NOW(),NOW()  UNION  
+SELECT '4','Brylcreem',1,NOW(),NOW()  UNION  
+SELECT '23','WD-40',1,NOW(),NOW()  UNION  
+SELECT '23','3-in-One Oil',1,NOW(),NOW()  UNION  
+SELECT '17','Care—Chore Boy',1,NOW(),NOW()  UNION  
+SELECT '17','Cinch',1,NOW(),NOW()  UNION  
+SELECT '17','Comet and Spic and Span',1,NOW(),NOW()  UNION  
+SELECT '17','Cloverine',1,NOW(),NOW()  UNION  
+SELECT '17','Cutex',1,NOW(),NOW()  UNION  
+SELECT '17','Denorex',1,NOW(),NOW()  UNION  
+SELECT '17','Ezo',1,NOW(),NOW()  UNION  
+SELECT '17','Kerodex',1,NOW(),NOW()  UNION  
+SELECT '17','Prell',1,NOW(),NOW()  UNION  
+SELECT '17','Zincon',1,NOW(),NOW()  UNION  
+SELECT '17','New Skin',1,NOW(),NOW()  UNION  
+SELECT '21','Bed Head',1,NOW(),NOW()  UNION  
+SELECT '21','Tigi',1,NOW(),NOW()  UNION  
+SELECT '21','Hardcore',1,NOW(),NOW()  UNION  
+SELECT '21','S Factor',1,NOW(),NOW();
+
+
+SELECT COUNT(*) AS record_count_brand
+FROM master_catalog.brand;
+
+SELECT * 
+FROM master_catalog.brand;
+
