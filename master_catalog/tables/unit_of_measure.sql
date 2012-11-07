@@ -22,7 +22,9 @@ CREATE  TABLE IF NOT EXISTS master_catalog.unit_of_measure (
   note VARCHAR(50) NOT NULL COMMENT 'additional information regarding unit_of_measure' ,
   is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active and valid',
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
-  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modification date.',
+  create_by  VARCHAR(50) NULL COMMENT 'Record created by.' ,
+  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modfication date.',
+  update_by  VARCHAR(50) NULL COMMENT 'Record updated by.' ,
   CONSTRAINT PK_unit_of_measure PRIMARY KEY (unit_of_measure_id)
  )
 ENGINE=InnoDB DEFAULT CHARSET=utf8, COMMENT = 'Units of Measure';

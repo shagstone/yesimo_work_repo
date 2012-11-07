@@ -20,12 +20,15 @@ CREATE  TABLE IF NOT EXISTS master_catalog.category_attribute (
   category_id INT NOT NULL COMMENT 'Unique Identifier for category_attribute.',
   category_attribute_id INT NOT NULL AUTO_INCREMENT COMMENT 'Unique Identifier for category attribute.',
   category_attribute VARCHAR(50) NOT NULL COMMENT 'Category attribute value.' ,
-  validation VARCHAR(10) NOT NULL COMMENT 'Category attribute validation.' ,
-  is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active and valid.',
-  is_attribute_required BIT NOT NULL DEFAULT 1 COMMENT 'Indicates the attribute is required.',
+  validation VARCHAR(50) NOT NULL COMMENT 'Category attribute validation.' ,
+  is_required BIT NOT NULL DEFAULT 1 COMMENT 'Indicates the attribute is required.',
+  is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active and valid',
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
-  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modification date.',
-  CONSTRAINT PK_category_attribute PRIMARY KEY (category_attribute_id, category_id),
+  create_by  VARCHAR(50) NULL COMMENT 'Record created by.' ,
+  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modfication date.',
+  update_by  VARCHAR(50) NULL COMMENT 'Record updated by.' ,
+  CONSTRAINT PK_category_attribute PRIMARY KEY (category_attribute_id),
+  CONSTRAINT UQ_category_attribute UNIQUE KEY ( category_id, category_attribute_id),
   CONSTRAINT fk_category_attribute_category
   FOREIGN KEY (category_id )
   REFERENCES master_catalog.category (category_id )

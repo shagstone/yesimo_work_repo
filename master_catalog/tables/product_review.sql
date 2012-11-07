@@ -8,9 +8,9 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
 
-CREATE SCHEMA IF NOT EXISTS `master_catalog` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+CREATE SCHEMA IF NOT EXISTS master_catalog DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
 SHOW WARNINGS;
-USE `master_catalog`;
+USE master_catalog;
 
 DROP TABLE IF EXISTS product_review ;
 
@@ -20,14 +20,17 @@ CREATE TABLE IF NOT EXISTS product_review (
   product_review_id INT NOT NULL AUTO_INCREMENT COMMENT 'master unique identifier',
   customer_product_rating INT NOT NULL DEFAULT 0 COMMENT 'product rating provided by customer',
   date_reviewed  DATETIME NOT NULL COMMENT 'date product available.' ,
-  status  CHAR(1) NOT NULL DEFAULT 'A' COMMENT 'record status',
+  -- status  CHAR(1) NOT NULL DEFAULT 'A' COMMENT 'record status',
   is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active and valid',
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
+  create_by  VARCHAR(50) NULL COMMENT 'Record created by.' ,
   update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modfication date.',
-  CONSTRAINT PK_mstr_product_review PRIMARY KEY ( product_review_id, product_id),
-   CONSTRAINT `fk_product_review_product`
-    FOREIGN KEY (`product_id` )
-    REFERENCES `master_catalog`.`product` (`product_id` )
+  update_by  VARCHAR(50) NULL COMMENT 'Record updated by.' ,
+  CONSTRAINT PK_mstr_product_review PRIMARY KEY ( product_review_id),
+  CONSTRAINT UQ_mstr_product_review UNIQUE KEY ( product_id,product_review_id),
+   CONSTRAINT fk_product_review_product
+    FOREIGN KEY (product_id )
+    REFERENCES master_catalog.product (product_id )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 	) 

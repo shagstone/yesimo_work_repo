@@ -15,6 +15,7 @@ DROP TABLE IF EXISTS locale_suppl_category ;
 
 
 CREATE TABLE IF NOT EXISTS locale_suppl_category (
+  locale_suppl_category_id INT NOT NULL AUTO_INCREMENT  COMMENT 'Unique Identifier for the supplier category table',
   supplier_id INT NOT NULL COMMENT 'supplier unique identifier',
   suppl_category_id INT NOT NULL COMMENT 'category unique identifier',
   locale_id INT NOT NULL COMMENT 'locale unique identifier' ,
@@ -22,8 +23,11 @@ CREATE TABLE IF NOT EXISTS locale_suppl_category (
   category_desc NVARCHAR(256) NULL COMMENT 'detailed description category of the product',
   is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active and valid',
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
-  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modification date.',
-  CONSTRAINT PK_locale_suppl_category_id PRIMARY KEY (suppl_category_id, locale_id),
+  create_by  VARCHAR(50) NULL COMMENT 'Record created by.' ,
+  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modfication date.',
+  update_by  VARCHAR(50) NULL COMMENT 'Record updated by.' ,
+  CONSTRAINT PK_locale_suppl_category PRIMARY KEY (locale_suppl_category_id),
+  CONSTRAINT UQ_locale_suppl_category UNIQUE KEY (suppl_category_id, locale_id),
  CONSTRAINT fk_local_suppl_category_category
   FOREIGN KEY (suppl_category_id)
   REFERENCES supplier_catalog.suppl_category (suppl_category_id)
@@ -31,7 +35,7 @@ CREATE TABLE IF NOT EXISTS locale_suppl_category (
   ON UPDATE NO ACTION,  
   CONSTRAINT fk_locale_suppl_category_locale
   FOREIGN KEY (locale_id )
-  REFERENCES master_catalog.locale (locale_id )
+  REFERENCES supplier_catalog.locale (locale_id )
   ON DELETE NO ACTION
   ON UPDATE NO ACTION
   )

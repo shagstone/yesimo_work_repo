@@ -19,13 +19,15 @@ CREATE  TABLE IF NOT EXISTS master_catalog.state (
   state_code CHAR(2) NOT NULL COMMENT 'Unique Identifier for state' ,
   state VARCHAR(45) NOT NULL COMMENT 'Name of state' ,
   country_id INT NOT NULL COMMENT 'Unique Identifier for country that state/province belongs' ,
-  is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active' ,
+  is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active and valid',
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
-  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modification date.',
+  create_by  VARCHAR(50) NULL COMMENT 'Record created by.' ,
+  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modfication date.',
+  update_by  VARCHAR(50) NULL COMMENT 'Record updated by.' ,
   CONSTRAINT PK_state PRIMARY KEY (state_id),
- CONSTRAINT `fk_state_country`
-    FOREIGN KEY (`country_id` )
-    REFERENCES `master_catalog`.`country` (`country_id` )
+ CONSTRAINT fk_state_country
+    FOREIGN KEY (country_id )
+    REFERENCES master_catalog.country (country_id )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 )

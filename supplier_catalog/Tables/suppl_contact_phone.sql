@@ -24,16 +24,19 @@ CREATE  TABLE IF NOT EXISTS supplier_catalog.suppl_contact_phone
   phone_number varchar(12) NULL COMMENT 'Supplier phoneuration key value',
   is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active' ,
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
-  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modification date.',
-  CONSTRAINT PK_suppl_contact_phone PRIMARY KEY (suppl_contact_phone_id, suppl_contact_id),
+  create_by  VARCHAR(50) NULL COMMENT 'Record created by.' ,
+  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modfication date.',
+  update_by  VARCHAR(50) NULL COMMENT 'Record updated by.' ,
+  CONSTRAINT PK_suppl_contact_phone PRIMARY KEY (suppl_contact_phone_id),
+  CONSTRAINT UQ_suppl_contact_phone UNIQUE KEY (suppl_contact_id, supplier_id, suppl_contact_phone_id),
   CONSTRAINT fk_suppl_contact_phone_suppl
   FOREIGN KEY ( supplier_id )
   REFERENCES supplier_catalog.suppl_contact ( supplier_id )
   ON DELETE NO ACTION
   ON UPDATE NO ACTION,
   CONSTRAINT fk_suppl_contact_phone_cont
-  FOREIGN KEY (suppl_contact_id, supplier_id)
-  REFERENCES supplier_catalog.suppl_contact (suppl_contact_id, supplier_id)
+  FOREIGN KEY (suppl_contact_id)
+  REFERENCES supplier_catalog.suppl_contact (suppl_contact_id)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION
   )

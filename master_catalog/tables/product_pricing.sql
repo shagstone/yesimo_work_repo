@@ -7,9 +7,9 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
 
-CREATE SCHEMA IF NOT EXISTS `master_catalog` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+CREATE SCHEMA IF NOT EXISTS master_catalog DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
 SHOW WARNINGS;
-USE `master_catalog`;
+USE master_catalog;
 
 DROP TABLE IF EXISTS product_pricing ;
 
@@ -23,17 +23,21 @@ CREATE TABLE IF NOT EXISTS product_pricing (
   msrp VARCHAR(100) NULL COMMENT 'manufacturer sugested retail price' ,
   map VARCHAR(100) NULL COMMENT 'manufacturer advertised price' ,
   currency_id INT NOT NULL COMMENT 'Unique Identifier for currency',
+  -- status  CHAR(1) NOT NULL DEFAULT 'A' COMMENT 'record status',
+  is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active and valid',
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
+  create_by  VARCHAR(50) NULL COMMENT 'Record created by.' ,
   update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modfication date.',
+  update_by  VARCHAR(50) NULL COMMENT 'Record updated by.' ,
   CONSTRAINT PK_product_pricing PRIMARY KEY (product_id),
-   CONSTRAINT `fk_product_price`
-    FOREIGN KEY (`product_id` )
-    REFERENCES `master_catalog`.`product` (`product_id` )
+   CONSTRAINT fk_product_price
+    FOREIGN KEY (product_id )
+    REFERENCES master_catalog.product (product_id )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-   CONSTRAINT `fk_master_prod_price_currency`
-    FOREIGN KEY (`currency_id` )
-    REFERENCES `master_catalog`.`currency` (`currency_id` )
+   CONSTRAINT fk_master_prod_price_currency
+    FOREIGN KEY (currency_id )
+    REFERENCES master_catalog.currency (currency_id )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION  
  )

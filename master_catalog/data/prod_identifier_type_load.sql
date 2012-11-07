@@ -1,17 +1,17 @@
 
-USE master_catalog;
+-- USE master_catalog;
 
-TRUNCATE TABLE master_catalog.prod_identifier_type;
+TRUNCATE TABLE prod_identifier_type;
 
 
 -- --------------------------------------------------------------
--- Load table master_catalog.prod_identifier_type
+-- Load table prod_identifier_type
 -- 
 -- Create Date  08-25-2012
 -- --------------------------------------------------------------
 
 SELECT COUNT(*) AS record_count_prod_identifier_type
-FROM master_catalog.prod_identifier_type;
+FROM prod_identifier_type;
 
 INSERT INTO prod_identifier_type(prod_identifier_type, identifier_type_description, is_active, create_date, update_date) VALUES('SPN','Supplier Product Number',1,NOW(),NOW());
 INSERT INTO prod_identifier_type(prod_identifier_type, identifier_type_description, is_active, create_date, update_date) VALUES('SPPN','Supplier Parent Product Number',1,NOW(),NOW());
@@ -22,9 +22,9 @@ INSERT INTO prod_identifier_type(prod_identifier_type, identifier_type_descripti
 INSERT INTO prod_identifier_type(prod_identifier_type, identifier_type_description, is_active, create_date, update_date) VALUES('EAN','European Article Number',1,NOW(),NOW());
 
 SELECT COUNT(*) AS record_count_prod_identifier_type
-FROM master_catalog.prod_identifier_type;
+FROM prod_identifier_type;
 
 SELECT *
-FROM master_catalog.prod_identifier_type;
+FROM prod_identifier_type;
 
 

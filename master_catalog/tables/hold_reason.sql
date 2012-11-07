@@ -19,7 +19,9 @@ CREATE  TABLE IF NOT EXISTS master_catalog.hold_reason (
   description VARCHAR(45) NULL COMMENT 'Detailed description of reason' ,
   is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active and valid',
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
-  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modification date.',
+  create_by  VARCHAR(50) NULL COMMENT 'Record created by.' ,
+  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modfication date.',
+  update_by  VARCHAR(50) NULL COMMENT 'Record updated by.' ,
   PRIMARY KEY (hold_reason_id)  
   )
 ENGINE=InnoDB DEFAULT CHARSET=utf8, COMMENT = 'Reasons products, categories, suppliers are on hold';

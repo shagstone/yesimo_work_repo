@@ -1,19 +1,19 @@
 
-USE master_catalog;
+-- USE master_catalog;
 
 TRUNCATE TABLE attribute_type;
 
 -- --------------------------------------------------------------
--- Load table master_catalog.attribute_type
+-- Load table attribute_type
 -- 
 -- Create Date  08-25-2012
 -- --------------------------------------------------------------
 
 SELECT COUNT(*) AS record_count_attribute_type
-FROM master_catalog.attribute_type;
+FROM attribute_type;
 
 
-INSERT INTO master_catalog.attribute_type (attribute_type, is_active, description,  create_date,  update_date) 
+INSERT INTO attribute_type (attribute_type, is_active, description,  create_date,  update_date) 
 SELECT 'style', 1, '' AS description, NOW() AS create_date, NOW() AS update_date
 UNION
 SELECT 'color', 1, ''  AS description, NOW() AS create_date, NOW() AS update_date
@@ -35,7 +35,7 @@ UNION
 SELECT 'Country of Origin', 1, 'Country of Origin'  AS description, NOW() AS create_date, NOW() AS update_date;
 
 SELECT COUNT(*) AS record_count_attribute_type
-FROM master_catalog.attribute_type;
+FROM attribute_type;
 
 SELECT *
-FROM master_catalog.attribute_type;
+FROM attribute_type;

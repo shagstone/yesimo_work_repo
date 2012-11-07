@@ -1,15 +1,15 @@
 
 
-USE master_catalog;
+-- USE master_catalog;
 
 -- --------------------------------------------------------------
--- Load table master_catalog.brand
+-- Load table brand
 -- 
 -- Create Date  08-25-2012
 -- --------------------------------------------------------------
 
 SELECT COUNT(*) AS record_count_brand
-FROM master_catalog.brand;
+FROM brand;
 
 
 INSERT INTO brand(brand_name, create_date) 
@@ -908,7 +908,7 @@ SELECT 'ZOO GAMES', NOW()UNION
 SELECT 'Zurich', NOW()UNION  
 SELECT 'Zuum media', NOW();  
 
-INSERT INTO master_catalog.brand(manufacturer_id,brand_name,is_active,create_date,update_date)
+INSERT INTO brand(manufacturer_id,brand_name,is_active,create_date,update_date)
 SELECT '18','Unilever United Kingdom',1,NOW(),NOW()  UNION  
 SELECT '18','L''Oréal',1,NOW(),NOW()  UNION  
 SELECT '18','Kimberly-Clark Corp.',1,NOW(),NOW()  UNION  
@@ -1479,8 +1479,13 @@ SELECT '21','S Factor',1,NOW(),NOW();
 
 
 SELECT COUNT(*) AS record_count_brand
-FROM master_catalog.brand;
+FROM brand;
+
+
+UPDATE brand
+    SET brand_normal = normal(brand.brand_name)
+;
 
 SELECT * 
-FROM master_catalog.brand;
+FROM brand LIMIT 10;
 

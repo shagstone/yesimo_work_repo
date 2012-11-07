@@ -21,8 +21,10 @@ CREATE  TABLE IF NOT EXISTS supplier_catalog.suppl_category_ancestor (
   generation INT NOT NULL COMMENT 'Category level',
   hops INT NOT NULL COMMENT 'Hops between generations',
   is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active and valid',
-  create_date DATETIME NOT NULL ,
-  update_date DATETIME NOT NULL ,
+  create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
+  create_by  VARCHAR(50) NULL COMMENT 'Record created by.' ,
+  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modfication date.',
+  update_by  VARCHAR(50) NULL COMMENT 'Record updated by.' ,
   PRIMARY KEY (category_ancestor_id, category_desendent_id) ,
   CONSTRAINT fk_suppl_category_ancestor_ancestor
     FOREIGN KEY (category_ancestor_id )

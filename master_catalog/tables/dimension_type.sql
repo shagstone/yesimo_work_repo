@@ -22,9 +22,11 @@ CREATE TABLE IF NOT EXISTS dimension_type (
   dimension_type_id INT NOT NULL AUTO_INCREMENT,
   dimension_type VARCHAR(100) NOT NULL ,
   description VARCHAR(45) NULL COMMENT 'dimension description' ,
-  is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active' ,
+  is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active and valid',
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
-  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modification date.',
+  create_by  VARCHAR(50) NULL COMMENT 'Record created by.' ,
+  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modfication date.',
+  update_by  VARCHAR(50) NULL COMMENT 'Record updated by.' ,
   PRIMARY KEY (dimension_type_id)
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8, COMMENT = 'Product Dimension Types (ie, height, length, etc)';

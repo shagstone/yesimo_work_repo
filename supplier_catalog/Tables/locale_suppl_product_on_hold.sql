@@ -16,15 +16,18 @@ DROP TABLE IF EXISTS locale_suppl_product_on_hold ;
 CREATE TABLE IF NOT EXISTS locale_suppl_product_on_hold (
   suppl_product_id INT NOT NULL COMMENT 'Unique Identifier for supplier product table',
   locale_id INT NOT NULL COMMENT 'locale unique identifier' ,
+  is_on_hold BIT NOT NULL DEFAULT 0 COMMENT 'Indicates that producr is on hold',
   hold_reason_id  INT NOT NULL COMMENT 'reason supplier product is on hold',
   is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active and valid',
   merg_suppl_prod_id INT NOT NULL COMMENT 'merge supplier product table unique identifier',
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
+  create_by  VARCHAR(50) NULL COMMENT 'Record created by.' ,
   update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modfication date.',
+  update_by  VARCHAR(50) NULL COMMENT 'Record updated by.' ,
   CONSTRAINT PK_locale_suppl_prod_hold PRIMARY KEY (suppl_product_id, locale_id, hold_reason_id),
    CONSTRAINT fk_locale_suppl_prod_hold
     FOREIGN KEY (hold_reason_id )
-    REFERENCES master_catalog.hold_reason (hold_reason_id )
+    REFERENCES supplier_catalog.hold_reason (hold_reason_id )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
    CONSTRAINT fk_locale_suppl_prod_hold_product
@@ -36,12 +39,13 @@ CREATE TABLE IF NOT EXISTS locale_suppl_product_on_hold (
   FOREIGN KEY (suppl_product_id, locale_id)
   REFERENCES supplier_catalog.locale_suppl_product (suppl_product_id, locale_id)
   ON DELETE NO ACTION
-  ON UPDATE NO ACTION,
-  CONSTRAINT fk_local_suppl_prod_hold_merg
-  FOREIGN KEY (suppl_product_id, hold_reason_id, locale_id )
-  REFERENCES staging.mlocale_suppl_prod_on_hold (merg_suppl_prod_id, locale_id, hold_reason_id)
-  ON DELETE NO ACTION
   ON UPDATE NO ACTION
+  -- ,
+  -- CONSTRAINT fk_local_suppl_prod_hold_merg
+  -- FOREIGN KEY (suppl_product_id, hold_reason_id, locale_id )
+  -- REFERENCES supplier_catalog.mlocale_suppl_prod_on_hold (merg_suppl_prod_id, locale_id, hold_reason_id)
+  -- ON DELETE NO ACTION
+  -- ON UPDATE NO ACTION
  )
 ENGINE=InnoDB DEFAULT CHARSET=utf8, COMMENT = 'supplier product on hold per locale';
 

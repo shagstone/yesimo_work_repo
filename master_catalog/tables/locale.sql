@@ -20,9 +20,11 @@ CREATE  TABLE IF NOT EXISTS master_catalog.locale (
   language VARCHAR(50) NOT NULL COMMENT 'Language' ,
   locale VARCHAR(50) NOT NULL COMMENT 'Name of locale' ,
   locale_code VARCHAR(6) NOT NULL COMMENT 'Code representing locale' ,
-  is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active' ,
+  is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active and valid',
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
-  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modification date.',
+  create_by  VARCHAR(50) NULL COMMENT 'Record created by.' ,
+  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modfication date.',
+  update_by  VARCHAR(50) NULL COMMENT 'Record updated by.' ,
   CONSTRAINT PK_locale PRIMARY KEY (locale_id)
 )
 ENGINE = InnoDB DEFAULT CHARSET=utf8, COMMENT = 'Code table to support internationalization';

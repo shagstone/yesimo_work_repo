@@ -15,6 +15,8 @@ DROP TABLE IF EXISTS locale_product_review ;
 
 
 CREATE TABLE IF NOT EXISTS locale_product_review (
+  locale_product_review_id INT NOT NULL AUTO_INCREMENT  COMMENT 'Unique Identifier for product locale review',
+  locale_product_id INT NOT NULL  COMMENT 'Unique Identifier for product locale',
   product_id INT NOT NULL COMMENT 'master product unique identifier',
   product_review_id INT NOT NULL  COMMENT 'product review identifier',
   locale_id INT NOT NULL COMMENT 'locale unique identifier' ,
@@ -23,18 +25,32 @@ CREATE TABLE IF NOT EXISTS locale_product_review (
   title VARCHAR(50) NOT NULL COMMENT 'product review title)',
   is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active and valid',
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
+  create_by  VARCHAR(50) NULL COMMENT 'Record created by.' ,
   update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modfication date.',
-  CONSTRAINT PK_local_product_review PRIMARY KEY ( product_review_id, product_id, locale_id)  ,   
-   CONSTRAINT fk_locale_product_review_prod
-    FOREIGN KEY (product_review_id,product_id )
-    REFERENCES master_catalog.product_review (product_review_id,product_id )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION   , 
-  CONSTRAINT fk_locale_product_review_locl_prod
-  FOREIGN KEY (product_id, locale_id )
-  REFERENCES master_catalog.locale_product (product_id, locale_id )
+  update_by  VARCHAR(50) NULL COMMENT 'Record updated by.' ,
+  CONSTRAINT PK_local_product_review PRIMARY KEY ( locale_product_review_id)  ,   
+  CONSTRAINT UQ_local_product_review UNIQUE KEY ( product_review_id, product_id, locale_id),   
+  CONSTRAINT fk_locale_product_review_prod
+  FOREIGN KEY (product_review_id)
+  REFERENCES master_catalog.product_review (product_review_id)
   ON DELETE NO ACTION
-  ON UPDATE NO ACTION
+  ON UPDATE NO ACTION, 
+  CONSTRAINT fk_locale_prod_review_locl_prod
+  FOREIGN KEY (locale_product_id)
+  REFERENCES master_catalog.locale_product (locale_product_id)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION ,  
+  CONSTRAINT fk_locale_prod_review_locale
+  FOREIGN KEY (locale_id)
+  REFERENCES master_catalog.locale (locale_id)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION ,  
+  CONSTRAINT fk_locale_prod_review_prod
+  FOREIGN KEY (product_id)
+  REFERENCES master_catalog.product (product_id)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION 
+
   )
 ENGINE=InnoDB DEFAULT CHARSET=utf8, COMMENT = 'Localization for Product Reviews';
 

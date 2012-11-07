@@ -1,19 +1,19 @@
 
 
-USE master_catalog;
+-- USE master_catalog;
 
-TRUNCATE TABLE master_catalog.currency;
+TRUNCATE TABLE currency;
 
 -- --------------------------------------------------------------
--- Load table master_catalog.currency
+-- Load table currency
 -- 
 -- Create Date  08-25-2012
 -- --------------------------------------------------------------
 
 SELECT COUNT(*) AS record_count_currency
-FROM master_catalog.currency;
+FROM currency;
 
-INSERT INTO master_catalog.currency(currency_code, currency, is_active, create_date, update_date) 
+INSERT INTO currency(currency_code, currency, is_active, create_date, update_date) 
 SELECT 'AZN', 'Azerbaijan New Manat', 1, NOW() ,  NOW()  UNION  
 SELECT 'BDT', 'Bangladesh Taka', 1, NOW() ,  NOW()  UNION  
 SELECT 'BHD', 'Bahrain Dinar', 1, NOW() ,  NOW()  UNION  
@@ -155,7 +155,7 @@ SELECT 'SPL', 'Seborga Luigino', 1, NOW() ,  NOW();
 
 
 SELECT COUNT(*) AS record_count_currency
-FROM master_catalog.currency;
+FROM currency;
 
 SELECT *
-FROM master_catalog.currency;
+FROM currency;

@@ -1,15 +1,15 @@
 
 
-USE master_catalog;
+-- USE master_catalog;
 
 -- --------------------------------------------------------------
--- Load table master_catalog.unit_of_measure
+-- Load table unit_of_measure
 -- 
 -- Create Date  08-25-2012
 -- --------------------------------------------------------------
 
 SELECT COUNT(*) AS record_count_unit_of_measure
-FROM master_catalog.unit_of_measure;
+FROM unit_of_measure;
 
 INSERT INTO unit_of_measure(unit_of_measure_code, unit_of_measure,note, is_active,create_date, update_date) VALUES('bbl','barrel','',1,NOW(),NOW());
 INSERT INTO unit_of_measure(unit_of_measure_code, unit_of_measure,note, is_active,create_date, update_date) VALUES('cu','cubic','',1,NOW(),NOW());
@@ -65,7 +65,7 @@ INSERT INTO unit_of_measure(unit_of_measure_code, unit_of_measure,note, is_activ
 INSERT INTO unit_of_measure(unit_of_measure_code, unit_of_measure,note, is_active,create_date, update_date) VALUES('kWh','kilowatt-hour','(kWh is standard)',1,NOW(),NOW());
 
 SELECT COUNT(*) AS record_count_unit_of_measure
-FROM master_catalog.unit_of_measure;
+FROM unit_of_measure;
 
 SELECT unit_of_measure_code, unit_of_measure,  is_active, create_date, update_date 
-FROM master_catalog.unit_of_measure;
+FROM unit_of_measure;

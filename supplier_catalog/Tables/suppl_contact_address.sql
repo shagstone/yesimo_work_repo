@@ -30,16 +30,19 @@ CREATE  TABLE IF NOT EXISTS supplier_catalog.suppl_contact_address
   country_id INT NOT NULL  COMMENT 'supplier country code',
   is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active' ,
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
-  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modification date.',
-  CONSTRAINT PK_suppl_contact_address PRIMARY KEY (suppl_contact_address_id, suppl_contact_id),
+  create_by  VARCHAR(50) NULL COMMENT 'Record created by.' ,
+  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modfication date.',
+  update_by  VARCHAR(50) NULL COMMENT 'Record updated by.' ,
+  CONSTRAINT PK_suppl_contact_address PRIMARY KEY (suppl_contact_address_id),
+  CONSTRAINT UQ_suppl_contact_address UNIQUE KEY (suppl_contact_id, supplier_id, suppl_contact_address_id),
   CONSTRAINT fk_suppl_contact_add_suppl
   FOREIGN KEY ( supplier_id )
   REFERENCES supplier_catalog.suppl_contact ( supplier_id )
   ON DELETE NO ACTION
   ON UPDATE NO ACTION,
   CONSTRAINT fk_suppl_contact_add_cont
-  FOREIGN KEY (suppl_contact_id, supplier_id)
-  REFERENCES supplier_catalog.suppl_contact (suppl_contact_id, supplier_id)
+  FOREIGN KEY (suppl_contact_id)
+  REFERENCES supplier_catalog.suppl_contact (suppl_contact_id)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION
   )

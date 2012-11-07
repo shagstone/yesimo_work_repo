@@ -23,7 +23,9 @@ CREATE  TABLE IF NOT EXISTS supplier_catalog.suppl_config
   suppl_config_value varchar(40) NULL COMMENT 'Supplier configuration key value',
   is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active' ,
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
-  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modification date.',
+  create_by  VARCHAR(50) NULL COMMENT 'Record created by.' ,
+  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modfication date.',
+  update_by  VARCHAR(50) NULL COMMENT 'Record updated by.' ,
     CONSTRAINT PK_suppl_config PRIMARY KEY (suppl_config_id),
     CONSTRAINT UQ_suppl_config UNIQUE KEY (supplier_id,  suppl_config_key),
   CONSTRAINT fk_suppl_product_config_suppl

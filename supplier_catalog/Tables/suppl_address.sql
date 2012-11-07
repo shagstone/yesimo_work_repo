@@ -17,7 +17,7 @@ DROP TABLE IF EXISTS suppl_address ;
 CREATE TABLE IF NOT EXISTS suppl_address (
   supplier_id INT NOT NULL COMMENT 'supplier unique identifier',
   suppl_addr_id INT NOT NULL AUTO_INCREMENT COMMENT 'supplier addres unique identifier',
-  status  CHAR(1) NOT NULL DEFAULT 'A' COMMENT 'record status',
+  -- status  CHAR(1) NOT NULL DEFAULT 'A' COMMENT 'record status',
   addr_type  CHAR(3) NOT NULL COMMENT 'supplier address type',
   addr_line_1 VARCHAR(100) NOT NULL COMMENT 'supplier address line 1',
   addr_line_2 VARCHAR(100) NOT NULL COMMENT 'supplier address line 2',
@@ -28,7 +28,9 @@ CREATE TABLE IF NOT EXISTS suppl_address (
   country_id INT NOT NULL  COMMENT 'supplier country code',
   is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active and valid',
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
+  create_by  VARCHAR(50) NULL COMMENT 'Record created by.' ,
   update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modfication date.',
+  update_by  VARCHAR(50) NULL COMMENT 'Record updated by.' ,
   CONSTRAINT PK_suppl_address_id PRIMARY KEY ( suppl_addr_id,supplier_id),
   CONSTRAINT fk_suppl_address_supplier
    FOREIGN KEY (supplier_id )
@@ -37,12 +39,12 @@ CREATE TABLE IF NOT EXISTS suppl_address (
   ON UPDATE NO ACTION,
   CONSTRAINT fk_suppl_address_state
   FOREIGN KEY (state_id )
-  REFERENCES master_catalog.state (state_id )
+  REFERENCES supplier_catalog.state (state_id )
   ON DELETE NO ACTION
   ON UPDATE NO ACTION,
   CONSTRAINT fk_suppl_address_country
   FOREIGN KEY (country_id )
-  REFERENCES master_catalog.country (country_id )
+  REFERENCES supplier_catalog.country (country_id )
   ON DELETE NO ACTION
   ON UPDATE NO ACTION
 )

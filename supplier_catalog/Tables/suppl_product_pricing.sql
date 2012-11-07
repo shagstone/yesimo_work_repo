@@ -24,10 +24,13 @@ CREATE TABLE IF NOT EXISTS suppl_product_pricing (
   map VARCHAR(100) NULL COMMENT 'manufacturer advertised price' ,
   currency_id INT NOT NULL COMMENT 'Unique Identifier for currency',
  --  status  CHAR(1) NOT NULL DEFAULT 'A' COMMENT 'record status',
-  merg_suppl_prod_id INT NOT NULL COMMENT 'supplier product merge table unique identifier',
+--   merg_suppl_prod_id INT NOT NULL COMMENT 'supplier product merge table unique identifier',
+  suppl_prod_prc_checksum CHAR(32) NULL  COMMENT  '128-bit (16-byte) hash value for supplier product price.' ,
   is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active and valid',
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
+  create_by  VARCHAR(50) NULL COMMENT 'Record created by.' ,
   update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modfication date.',
+  update_by  VARCHAR(50) NULL COMMENT 'Record updated by.' ,
   CONSTRAINT PK_suppl_product_pricing PRIMARY KEY (suppl_product_id),
    CONSTRAINT fk_suppl_product_price
     FOREIGN KEY (suppl_product_id )
@@ -36,14 +39,15 @@ CREATE TABLE IF NOT EXISTS suppl_product_pricing (
     ON UPDATE NO ACTION,
    CONSTRAINT fk_suppl_prod_price_currency
     FOREIGN KEY (currency_id )
-    REFERENCES master_catalog.currency (currency_id )
+    REFERENCES supplier_catalog.currency (currency_id )
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
- CONSTRAINT fk_sppl_prod_price_merg
-  FOREIGN KEY (merg_suppl_prod_id)
-  REFERENCES staging.merg_suppl_prod (merg_suppl_prod_id)
-  ON DELETE NO ACTION
-  ON UPDATE NO ACTION
+    ON UPDATE NO ACTION
+--     ,
+--  CONSTRAINT fk_sppl_prod_price_merg
+--   FOREIGN KEY (merg_suppl_prod_id)
+--   REFERENCES staging.merg_suppl_prod (merg_suppl_prod_id)
+--   ON DELETE NO ACTION
+--   ON UPDATE NO ACTION
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8, COMMENT = 'Suppler Product Pricing';
 

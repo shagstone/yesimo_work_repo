@@ -15,28 +15,38 @@ DROP TABLE IF EXISTS suppl_product_review ;
 
 
 CREATE TABLE IF NOT EXISTS suppl_product_review (
-  suppl_product_id INT NOT NULL COMMENT 'supplier product unique identifier',
   suppl_prod_revw_id INT NOT NULL AUTO_INCREMENT COMMENT 'supplier unique identifier',
-  product_id INT NOT NULL COMMENT 'master product unique identifier',
+  suppl_product_id INT NOT NULL COMMENT 'supplier product unique identifier',
+  supplier_id INT NOT NULL COMMENT 'supplier unique identifier',
+  suppl_prod_num varchar(20) NOT NULL COMMENT 'primary product number as determined by the supplier',
+ -- product_id INT NOT NULL COMMENT 'master product unique identifier',
   customer_product_rating INT NOT NULL DEFAULT 0 COMMENT 'product rating provided by customer',
   date_reviewed  DATETIME NOT NULL COMMENT 'date product available.' ,
-  merg_suppl_prod_id INT NOT NULL COMMENT 'supplier product merge table unique identifier',
-  merg_suppl_prod_revw_id INT NOT NULL COMMENT 'merge supplier product review unique identifier',
+--   merg_suppl_prod_id INT NOT NULL COMMENT 'supplier product merge table unique identifier',
+--   merg_suppl_prod_revw_id INT NOT NULL COMMENT 'merge supplier product review unique identifier',
  --  status  CHAR(1) NOT NULL DEFAULT 'A' COMMENT 'record status',
    is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active and valid',
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
+  create_by  VARCHAR(50) NULL COMMENT 'Record created by.' ,
   update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modfication date.',
-  CONSTRAINT PK_suppl_product_review PRIMARY KEY (suppl_prod_revw_id, suppl_product_id),
-    CONSTRAINT fk_suppl_product_review_prod_id
-    FOREIGN KEY (suppl_product_id )
-    REFERENCES supplier_catalog.suppl_product (suppl_product_id )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
- CONSTRAINT fk_sppl_prod_merg_review
-  FOREIGN KEY (merg_suppl_prod_revw_id, merg_suppl_prod_id)
-  REFERENCES staging.merg_suppl_prod_review (merg_suppl_prod_revw_id, merg_suppl_prod_id)
+  update_by  VARCHAR(50) NULL COMMENT 'Record updated by.' ,
+  CONSTRAINT PK_suppl_product_review PRIMARY KEY (suppl_prod_revw_id),
+  CONSTRAINT fk_suppl_product_review_product
+  FOREIGN KEY (suppl_product_id )
+  REFERENCES supplier_catalog.suppl_product (suppl_product_id )
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION,
+  CONSTRAINT fk_suppl_prod_review_suppl_prod_num
+  FOREIGN KEY(supplier_id, suppl_prod_num )
+  REFERENCES supplier_catalog.suppl_product (supplier_id, suppl_prod_num )
   ON DELETE NO ACTION
   ON UPDATE NO ACTION
+--   ,
+--  CONSTRAINT fk_sppl_prod_merg_review
+--   FOREIGN KEY (merg_suppl_prod_revw_id, merg_suppl_prod_id)
+--   REFERENCES staging.merg_suppl_prod_review (merg_suppl_prod_revw_id, merg_suppl_prod_id)
+--   ON DELETE NO ACTION
+--   ON UPDATE NO ACTION
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8, COMMENT = 'Suppler Product Review';
 

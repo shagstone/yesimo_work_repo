@@ -15,14 +15,19 @@ DROP TABLE IF EXISTS suppl_mstr_category_map ;
 
 
 CREATE TABLE IF NOT EXISTS suppl_mstr_category_map (
+  suppl_mstr_category_map_id INT NOT NULL COMMENT 'Unique identifier for supplier category and category map table.',
   supplier_id INT NOT NULL COMMENT 'supplier unique identifier',
   suppl_category_id INT NOT NULL COMMENT 'supplier category unique identifier',
   category_id INT NOT NULL COMMENT 'master catalog category unique identifier' ,
   is_mstr_utilized BIT NOT NULL DEFAULT 0 COMMENT 'Indicates that this supplier category/category mapping is used for master product',
+  suppl_utilization_ind SMALLINT NOT NULL DEFAULT 0 COMMENT 'supplier utilization indicator determines the order suppliers should be used for master product info.',
   is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active and valid',
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
-  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modification date.',
-  CONSTRAINT PK_suppl_category_id PRIMARY KEY (supplier_id, suppl_category_id, category_id),
+  create_by  VARCHAR(50) NULL COMMENT 'Record created by.' ,
+  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modfication date.',
+  update_by  VARCHAR(50) NULL COMMENT 'Record updated by.' ,
+  CONSTRAINT PK_suppl_category PRIMARY KEY (suppl_mstr_category_map_id),
+  CONSTRAINT UQ_suppl_category_id UNIQUE KEY (supplier_id, suppl_category_id, category_id),
   CONSTRAINT fk_suppl_mstr_category_map_Supplier
   FOREIGN KEY (suppl_category_id, supplier_id)
   REFERENCES supplier_catalog.suppl_category (suppl_category_id, supplier_id)

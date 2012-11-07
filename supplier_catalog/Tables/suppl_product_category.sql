@@ -21,7 +21,9 @@ CREATE TABLE IF NOT EXISTS suppl_product_category (
   merg_suppl_prod_id INT NOT NULL COMMENT 'supplier product merge table unique identifier',
   is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active and valid',
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
+  create_by  VARCHAR(50) NULL COMMENT 'Record created by.' ,
   update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modfication date.',
+  update_by  VARCHAR(50) NULL COMMENT 'Record updated by.' ,
   CONSTRAINT PK_suppl_product_category PRIMARY KEY ( suppl_category_id, suppl_product_id),
    CONSTRAINT fk_suppl_product_category
     FOREIGN KEY (suppl_category_id )

@@ -7,9 +7,9 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
 
-CREATE SCHEMA IF NOT EXISTS `master_catalog` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+CREATE SCHEMA IF NOT EXISTS master_catalog DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
 SHOW WARNINGS;
-USE `master_catalog`;
+USE master_catalog;
 
 DROP TABLE IF EXISTS product ;
 
@@ -28,24 +28,26 @@ CREATE TABLE IF NOT EXISTS product (
   in_stock	BIT NOT NULL DEFAULT 0 COMMENT 'flag that indicates whether a product is in stock' ,
   is_discontinued	BIT NOT NULL DEFAULT 0 COMMENT 'flag that indicates whether a product has been disconinued' ,
 --   status  CHAR(1) NOT NULL DEFAULT 'A' COMMENT 'record status',
-  is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active and valid',
   is_on_hold BIT NOT NULL DEFAULT 0 COMMENT 'Indicates that the product is on administrative hold.',
  --  hold_reason_id INT NULL COMMENT 'Unique Identifier for hold_reason' ,
   available_start_date  DATETIME NOT NULL COMMENT 'date product available.' ,
   available_end_date  DATETIME NOT NULL COMMENT 'date product no longer available.' ,
   linked_suppl_product_id INT NULL COMMENT 'linked supplier product unique identifier',
   linked_supplier_id INT NULL COMMENT 'linked supplier unique identifier',
+  is_active BIT NOT NULL DEFAULT 1 COMMENT 'Indicates that record is active and valid',
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
+  create_by  VARCHAR(50) NULL COMMENT 'Record created by.' ,
   update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modfication date.',
+  update_by  VARCHAR(50) NULL COMMENT 'Record updated by.' ,
   CONSTRAINT PK_product_id PRIMARY KEY (product_id),
-  CONSTRAINT `fk_product_brand`
-  FOREIGN KEY (`brand_id` )
-  REFERENCES `master_catalog`.`brand` (`brand_id` )
+  CONSTRAINT fk_product_brand
+  FOREIGN KEY (brand_id )
+  REFERENCES master_catalog.brand (brand_id )
   ON DELETE NO ACTION
   ON UPDATE NO ACTION,
-  CONSTRAINT `fk_product_category`
-  FOREIGN KEY (`category_id` )
-  REFERENCES `master_catalog`.`category` (`category_id` )
+  CONSTRAINT fk_product_category
+  FOREIGN KEY (category_id )
+  REFERENCES master_catalog.category (category_id )
   ON DELETE NO ACTION
   ON UPDATE NO ACTION,
   CONSTRAINT fk_product_country
