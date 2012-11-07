@@ -22,7 +22,9 @@ CREATE TABLE IF NOT EXISTS build_locale_suppl_prod (
   is_processed BIT NOT NULL DEFAULT 0 COMMENT 'Indicates that the has been processed.',
   is_loadable BIT NOT NULL DEFAULT 0 COMMENT 'Indicates that the record is loadable.',  
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
-  update_date DATETIME NOT NULL COMMENT 'Record update date',
+  create_by  VARCHAR(50) NULL COMMENT 'Record created by.' ,
+  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modfication date.',
+  update_by  VARCHAR(50) NULL COMMENT 'Record updated by.' ,
   CONSTRAINT PK_build_prod_locale PRIMARY KEY ( supplier_id, suppl_prod_num)
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8, COMMENT = 'Localization for Supplier Product';

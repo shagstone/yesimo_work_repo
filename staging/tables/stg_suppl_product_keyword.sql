@@ -13,17 +13,18 @@ DROP TABLE IF EXISTS stg_suppl_product_keyword ;
 
 
 CREATE TABLE IF NOT EXISTS stg_suppl_product_keyword (
+  stg_suppl_product_keyword_id INT NOT NULL AUTO_INCREMENT  COMMENT 'system generated unique identifier for staging product keyword table ',
   stg_suppl_product_id INT NOT NULL COMMENT 'system generated unique identifier for staging product table',
   supplier_id INT NOT NULL COMMENT 'supplier unique identifier',
-  stg_prod_keyword_id INT NOT NULL AUTO_INCREMENT  COMMENT 'system generated unique identifier for staging product atttribute table',
   locale_code nvarchar(6) NOT NULL COMMENT 'Code representing locale ("en_us", etc)',
   keyword  nvarchar(100) NOT NULL COMMENT 'product keyword value (Electronics, Television, TV, LCD, etc)',
+  seq TINYINT NOT NULL DEFAULT 0 COMMENT 'order for multiple descriptions for a specific type',
   is_loaded bit NOT NULL DEFAULT 0 COMMENT 'flag that indicates that the product was loaded into the catalog tables',
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
-  CONSTRAINT PK_supplier_stg_suppl_product_id PRIMARY KEY ( stg_prod_keyword_id, stg_suppl_product_id),
+  CONSTRAINT PK_supplier_stg_suppl_product_id PRIMARY KEY (stg_suppl_product_keyword_id),
   CONSTRAINT fk_stg_suppl_product_keyword_stg
-  FOREIGN KEY (stg_suppl_product_id )
-  REFERENCES staging.stg_suppl_product (stg_suppl_product_id )
+  FOREIGN KEY (supplier_id, stg_suppl_product_id )
+  REFERENCES staging.stg_suppl_product (supplier_id, stg_suppl_product_id )
   ON DELETE NO ACTION
   ON UPDATE NO ACTION
 )

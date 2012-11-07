@@ -22,10 +22,12 @@ CREATE TABLE IF NOT EXISTS build_locale_suppl_prod_attribute (
   attribute_type_id  INT NOT NULL COMMENT 'suppl_prod attribute type(color, format, etc)',
   suppl_prod_attribute_number  varchar(20) NOT NULL COMMENT 'supplier product attribute identifier (style number, color number, etc)',
   suppl_prod_attribute VARCHAR(100) NOT NULL COMMENT 'supplier product attribute (black, softcover, etc)',
-  is_processed BIT NOT NULL DEFAULT 0 COMMENT 'Indicates that the has been processed.',
+  is_processed BIT NOT NULL DEFAULT 0 COMMENT 'Indicates that recorded the has been processed.',
   is_loadable BIT NOT NULL DEFAULT 0 COMMENT 'Indicates that the record is loadable.',  
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
-  update_date DATETIME NOT NULL COMMENT 'Record update date',
+  create_by  VARCHAR(50) NULL COMMENT 'Record created by.' ,
+  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modfication date.',
+  update_by  VARCHAR(50) NULL COMMENT 'Record updated by.' ,
   CONSTRAINT PK_build_prod_attribute_id PRIMARY KEY ( supplier_id, suppl_prod_num, locale_id, suppl_prod_attribute_number)
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8, COMMENT = 'Localization for Supplier Product Attributes';

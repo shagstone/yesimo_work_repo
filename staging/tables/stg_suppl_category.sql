@@ -23,10 +23,11 @@ CREATE TABLE staging.stg_suppl_category(
   yesimo_category varchar(100) NULL COMMENT 'Yesimo Category',
   yesimo_category_parent varchar(100) NULL COMMENT 'Yesimo Parent Category ',
   is_loaded BIT NOT NULL DEFAULT 0 COMMENT 'Indicates that record is active and valid',
-  not_loadable_reason SMALLINT NOT NULL DEFAULT 0 COMMENT 'Reason Category is not loaded into suppl_category table.',
+  is_not_loadable bit NOT NULL DEFAULT 0 COMMENT 'Flag that indicates that the product is not loadable',
+  load_error_id SMALLINT NULL COMMENT 'Unique Identifier for load_error table' ,
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
-  loaded_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Record modfication date.',
-  CONSTRAINT PK_stg_suppl_id PRIMARY KEY ( stg_suppl_supplier_category_id),
+  load_date  DATETIME NULL COMMENT 'Record modfication date.',
+  CONSTRAINT PK_stg_suppl_stg_suppl_category PRIMARY KEY ( stg_suppl_supplier_category_id),
   CONSTRAINT fk_stg_suppl_supplier_cat_supplier
   FOREIGN KEY (supplier_id)
   REFERENCES supplier_catalog.supplier (supplier_id )

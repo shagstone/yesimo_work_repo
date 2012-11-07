@@ -16,18 +16,18 @@ DROP TABLE IF EXISTS stg_suppl_product_dimension ;
 
 
 CREATE TABLE IF NOT EXISTS stg_suppl_product_dimension (
+  stg_suppl_product_dimension_id INT NOT NULL AUTO_INCREMENT  COMMENT 'system generated unique identifier for staging product dimension table',
   stg_suppl_product_id INT NOT NULL COMMENT 'system generated unique identifier for staging product table',
   supplier_id INT NOT NULL COMMENT 'supplier unique identifier',
-  prod_dimension_id INT NOT NULL AUTO_INCREMENT  COMMENT 'system generated unique identifier for staging product atttribute table',
   dimension  nvarchar(20) NOT NULL COMMENT 'product dimension value (black, 2 years, etc)', 
   unit_of_measure  nvarchar(10) NOT NULL COMMENT 'supplier product dimension unit_of_measure (LB, in, kg, etc)',
   dimension_type  nvarchar(100) NOT NULL COMMENT 'supplier_product dimension type(color, Shipping Weight, etc)',
   is_loaded bit NOT NULL DEFAULT 0 COMMENT 'flag that indicates that the product was loaded into the catalog tables',
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
-  CONSTRAINT PK_supplier_stg_suppl_product_id PRIMARY KEY ( prod_dimension_id, stg_suppl_product_id),
+  CONSTRAINT PK_supplier_stg_suppl_product_id PRIMARY KEY (stg_suppl_product_dimension_id),
   CONSTRAINT fk_stg_suppl_product_dimension_product
-  FOREIGN KEY (stg_suppl_product_id )
-  REFERENCES staging.stg_suppl_product (stg_suppl_product_id )
+  FOREIGN KEY (supplier_id, stg_suppl_product_id )
+  REFERENCES staging.stg_suppl_product (supplier_id, stg_suppl_product_id )
   ON DELETE NO ACTION
   ON UPDATE NO ACTION
 )

@@ -1,6 +1,5 @@
-
 -- -----------------------------------------------------
--- Table stg_suppl_product_media
+-- Table stg_suppl_product_hold
 -- -----------------------------------------------------
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
@@ -11,26 +10,24 @@ CREATE SCHEMA IF NOT EXISTS staging DEFAULT CHARACTER SET utf8 COLLATE utf8_gene
 SHOW WARNINGS;
 USE staging;
 
-DROP TABLE IF EXISTS stg_suppl_product_media ;
+DROP TABLE IF EXISTS stg_suppl_product_hold ;
 
 
-CREATE TABLE IF NOT EXISTS stg_suppl_product_media (
-  stg_suppl_product_media_id INT NOT NULL AUTO_INCREMENT  COMMENT 'system generated unique identifier for staging product media table ',
+CREATE TABLE IF NOT EXISTS stg_suppl_prod_hold (
   stg_suppl_product_id INT NOT NULL COMMENT 'system generated unique identifier for staging product table',
   supplier_id INT NOT NULL COMMENT 'supplier unique identifier',
-  media  nvarchar(100) NOT NULL COMMENT 'product media value ',
-  media_type  nvarchar(20) NOT NULL COMMENT 'product media type(images, uri, videos, etc)',
-  -- media_subtype  nvarchar(20) NULL COMMENT 'product media type(large, thumbnail, etc)',
+  suppl_prod_hold_id INT NOT NULL AUTO_INCREMENT  COMMENT 'system generated unique identifier for staging product hold table ',
+  hold  nvarchar(100) NOT NULL COMMENT 'product hold reason',
   is_loaded bit NOT NULL DEFAULT 0 COMMENT 'flag that indicates that the product was loaded into the catalog tables',
   create_date  datetime NOT NULL COMMENT 'Record creation date.' ,
-  CONSTRAINT PK_stg_suppl_product_media_id PRIMARY KEY (stg_suppl_product_media_id),
-  CONSTRAINT fk_stg_suppl_product_media_product
-  FOREIGN KEY (supplier_id, stg_suppl_product_id )
-  REFERENCES staging.stg_suppl_product (supplier_id, stg_suppl_product_id )
+  CONSTRAINT PK_stg_suppl_prod_hold_id PRIMARY KEY ( suppl_prod_hold_id),
+  CONSTRAINT fk_stg_suppl_prod_hold_product
+  FOREIGN KEY (stg_suppl_product_id )
+  REFERENCES staging.stg_suppl_product (stg_suppl_product_id )
   ON DELETE NO ACTION
   ON UPDATE NO ACTION
 )
-ENGINE=InnoDB DEFAULT CHARSET=utf8, COMMENT = 'Staging Table for Supplier Product Media';
+ENGINE=InnoDB DEFAULT CHARSET=utf8, COMMENT = 'Staging Table for Supplier Product hold';
 
 
 SHOW WARNINGS;

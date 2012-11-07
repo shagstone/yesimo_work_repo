@@ -14,19 +14,19 @@ DROP TABLE IF EXISTS stg_suppl_product_description ;
 
 
 CREATE TABLE IF NOT EXISTS stg_suppl_product_description (
+  stg_suppl_prod_descript_id INT NOT NULL AUTO_INCREMENT  COMMENT 'system generated unique identifier for staging description product table ',
   stg_suppl_product_id INT NOT NULL COMMENT 'system generated unique identifier for staging product table',
   supplier_id INT NOT NULL COMMENT 'supplier unique identifier',
-  prod_description_id INT NOT NULL AUTO_INCREMENT  COMMENT 'system generated unique identifier for staging description product table ',
   locale_code nvarchar(6) NOT NULL COMMENT 'Code representing locale ("en_us", etc)',
   description  nvarchar(8000) NOT NULL COMMENT 'product description ',
   description_type  nvarchar(100) NOT NULL COMMENT 'product description type(name, description, bullet_points, etc)',
   seq TINYINT NOT NULL DEFAULT 0 COMMENT 'order for multiple descriptions for a specific type',
   is_loaded bit NOT NULL DEFAULT 0 COMMENT 'flag that indicates that the product was loaded into the catalog tables',
   create_date  DATETIME NOT NULL COMMENT 'Record creation date.' ,
-  CONSTRAINT PK_supplier_stg_suppl_product_id PRIMARY KEY ( prod_description_id, stg_suppl_product_id),
+  CONSTRAINT PK_supplier_stg_suppl_product_id PRIMARY KEY (stg_suppl_prod_descript_id),
   CONSTRAINT fk_stg_suppl_product_description_product
-  FOREIGN KEY (stg_suppl_product_id )
-  REFERENCES staging.stg_suppl_product (stg_suppl_product_id )
+  FOREIGN KEY (supplier_id, stg_suppl_product_id )
+  REFERENCES staging.stg_suppl_product (supplier_id, stg_suppl_product_id )
   ON DELETE NO ACTION
   ON UPDATE NO ACTION
 )
